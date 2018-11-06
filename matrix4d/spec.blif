@@ -1,0 +1,55 @@
+#.top matrix4
+.model matrix4
+.inputs Is1 w11 w21 w31 w41 
+.inputs Is2 w12 w22 w32 w42 
+.inputs Is3 w13 w23 w33 w43
+.inputs Is4 w14 w24 w34 w44
+.outputs Istim1 Istim2 Istim3 Istim4
+
+.subckt and in0=Is1 in1=w11 out=Is1w11
+.subckt and in0=Is2 in1=w12 out=Is2w12
+.subckt and in0=Is3 in1=w13 out=Is3w13
+.subckt and in0=Is4 in1=w14 out=Is4w14
+.subckt xor4 in0=Is1w11 in1=Is2w12 in2=Is3w13 in3=Is4w14 out=Istim1
+
+.subckt and in0=Is1 in1=w21 out=Is1w21
+.subckt and in0=Is2 in1=w22 out=Is2w22
+.subckt and in0=Is3 in1=w23 out=Is3w23
+.subckt and in0=Is4 in1=w24 out=Is4w24
+.subckt xor4 in0=Is1w21 in1=Is2w22 in2=Is3w23 in3=Is4w24 out=Istim2
+
+.subckt and in0=Is1 in1=w31 out=Is1w31
+.subckt and in0=Is2 in1=w32 out=Is2w32
+.subckt and in0=Is3 in1=w33 out=Is3w33
+.subckt and in0=Is4 in1=w34 out=Is4w34
+.subckt xor4 in0=Is1w31 in1=Is2w32 in2=Is3w33 in3=Is4w34 out=Istim3
+
+.subckt and in0=Is1 in1=w41 out=Is1w41
+.subckt and in0=Is2 in1=w42 out=Is2w42
+.subckt and in0=Is3 in1=w43 out=Is3w43
+.subckt and in0=Is4 in1=w44 out=Is4w44
+.subckt xor4 in0=Is1w41 in1=Is2w42 in2=Is3w43 in3=Is4w44 out=Istim4
+.end
+
+.model and
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+11 1
+.end
+
+.model xor4
+.inputs in0 in1 in2 in3
+.outputs out
+.subckt xor in0=in0 in1=in1 out=in0_in1
+.subckt xor in0=in0_in1 in1=in2 out=in0_in1_in2
+.subckt xor in0=in0_in1_in2 in1=in3 out=out
+.end
+
+.model xor
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+10 1
+01 1
+.end

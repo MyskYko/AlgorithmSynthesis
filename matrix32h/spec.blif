@@ -1,0 +1,1147 @@
+#.top matrix32
+.model matrix32
+.inputs Is1 Is5 Is9 Is13 Is17 Is21 Is25 Is29
+.inputs w1_1 w4_1 w3_1 w2_1 w5_1 w8_1 w7_1 w6_1 w9_1 w12_1 w11_1 w10_1 w13_1 w16_1 w15_1 w14_1 w17_1 w20_1 w19_1 w18_1 w21_1 w24_1 w23_1 w22_1 w25_1 w28_1 w27_1 w26_1 w32_1 w31_1 w30_1 w29_1 w1_5 w4_5 w3_5 w2_5 w5_5 w8_5 w7_5 w6_5 w9_5 w12_5 w11_5 w10_5 w13_5 w16_5 w15_5 w14_5 w17_5 w20_5 w19_5 w18_5 w21_5 w24_5 w23_5 w22_5 w25_5 w28_5 w27_5 w26_5 w32_5 w31_5 w30_5 w29_5 w1_9 w4_9 w3_9 w2_9 w5_9 w8_9 w7_9 w6_9 w9_9 w12_9 w11_9 w10_9 w13_9 w16_9 w15_9 w14_9 w17_9 w20_9 w19_9 w18_9 w21_9 w24_9 w23_9 w22_9 w25_9 w28_9 w27_9 w26_9 w32_9 w31_9 w30_9 w29_9 w1_13 w4_13 w3_13 w2_13 w5_13 w8_13 w7_13 w6_13 w9_13 w12_13 w11_13 w10_13 w13_13 w16_13 w15_13 w14_13 w17_13 w20_13 w19_13 w18_13 w21_13 w24_13 w23_13 w22_13 w25_13 w28_13 w27_13 w26_13 w32_13 w31_13 w30_13 w29_13 w1_17 w4_17 w3_17 w2_17 w5_17 w8_17 w7_17 w6_17 w9_17 w12_17 w11_17 w10_17 w13_17 w16_17 w15_17 w14_17 w17_17 w20_17 w19_17 w18_17 w21_17 w24_17 w23_17 w22_17 w25_17 w28_17 w27_17 w26_17 w32_17 w31_17 w30_17 w29_17 w1_21 w4_21 w3_21 w2_21 w5_21 w8_21 w7_21 w6_21 w9_21 w12_21 w11_21 w10_21 w13_21 w16_21 w15_21 w14_21 w17_21 w20_21 w19_21 w18_21 w21_21 w24_21 w23_21 w22_21 w25_21 w28_21 w27_21 w26_21 w32_21 w31_21 w30_21 w29_21 w1_25 w4_25 w3_25 w2_25 w5_25 w8_25 w7_25 w6_25 w9_25 w12_25 w11_25 w10_25 w13_25 w16_25 w15_25 w14_25 w17_25 w20_25 w19_25 w18_25 w21_25 w24_25 w23_25 w22_25 w25_25 w28_25 w27_25 w26_25 w32_25 w31_25 w30_25 w29_25 w1_29 w4_29 w3_29 w2_29 w5_29 w8_29 w7_29 w6_29 w9_29 w12_29 w11_29 w10_29 w13_29 w16_29 w15_29 w14_29 w17_29 w20_29 w19_29 w18_29 w21_29 w24_29 w23_29 w22_29 w25_29 w28_29 w27_29 w26_29 w32_29 w31_29 w30_29 w29_29
+.inputs Is2 Is6 Is10 Is14 Is18 Is22 Is26 Is30
+.inputs w2_2 w1_2 w4_2 w3_2 w6_2 w5_2 w8_2 w7_2 w10_2 w9_2 w12_2 w11_2 w14_2 w13_2 w16_2 w15_2 w18_2 w17_2 w20_2 w19_2 w22_2 w21_2 w24_2 w23_2 w26_2 w25_2 w28_2 w27_2 w29_2 w32_2 w31_2 w30_2 w2_6 w1_6 w4_6 w3_6 w6_6 w5_6 w8_6 w7_6 w10_6 w9_6 w12_6 w11_6 w14_6 w13_6 w16_6 w15_6 w18_6 w17_6 w20_6 w19_6 w22_6 w21_6 w24_6 w23_6 w26_6 w25_6 w28_6 w27_6 w29_6 w32_6 w31_6 w30_6 w2_10 w1_10 w4_10 w3_10 w6_10 w5_10 w8_10 w7_10 w10_10 w9_10 w12_10 w11_10 w14_10 w13_10 w16_10 w15_10 w18_10 w17_10 w20_10 w19_10 w22_10 w21_10 w24_10 w23_10 w26_10 w25_10 w28_10 w27_10 w29_10 w32_10 w31_10 w30_10 w2_14 w1_14 w4_14 w3_14 w6_14 w5_14 w8_14 w7_14 w10_14 w9_14 w12_14 w11_14 w14_14 w13_14 w16_14 w15_14 w18_14 w17_14 w20_14 w19_14 w22_14 w21_14 w24_14 w23_14 w26_14 w25_14 w28_14 w27_14 w29_14 w32_14 w31_14 w30_14 w2_18 w1_18 w4_18 w3_18 w6_18 w5_18 w8_18 w7_18 w10_18 w9_18 w12_18 w11_18 w14_18 w13_18 w16_18 w15_18 w18_18 w17_18 w20_18 w19_18 w22_18 w21_18 w24_18 w23_18 w26_18 w25_18 w28_18 w27_18 w29_18 w32_18 w31_18 w30_18 w2_22 w1_22 w4_22 w3_22 w6_22 w5_22 w8_22 w7_22 w10_22 w9_22 w12_22 w11_22 w14_22 w13_22 w16_22 w15_22 w18_22 w17_22 w20_22 w19_22 w22_22 w21_22 w24_22 w23_22 w26_22 w25_22 w28_22 w27_22 w29_22 w32_22 w31_22 w30_22 w2_26 w1_26 w4_26 w3_26 w6_26 w5_26 w8_26 w7_26 w10_26 w9_26 w12_26 w11_26 w14_26 w13_26 w16_26 w15_26 w18_26 w17_26 w20_26 w19_26 w22_26 w21_26 w24_26 w23_26 w26_26 w25_26 w28_26 w27_26 w29_26 w32_26 w31_26 w30_26 w2_30 w1_30 w4_30 w3_30 w6_30 w5_30 w8_30 w7_30 w10_30 w9_30 w12_30 w11_30 w14_30 w13_30 w16_30 w15_30 w18_30 w17_30 w20_30 w19_30 w22_30 w21_30 w24_30 w23_30 w26_30 w25_30 w28_30 w27_30 w29_30 w32_30 w31_30 w30_30
+.inputs Is3 Is7 Is11 Is15 Is19 Is23 Is27 Is31
+.inputs w3_3 w2_3 w1_3 w4_3 w7_3 w6_3 w5_3 w8_3 w11_3 w10_3 w9_3 w12_3 w15_3 w14_3 w13_3 w16_3 w19_3 w18_3 w17_3 w20_3 w23_3 w22_3 w21_3 w24_3 w27_3 w26_3 w25_3 w28_3 w30_3 w29_3 w32_3 w31_3 w3_7 w2_7 w1_7 w4_7 w7_7 w6_7 w5_7 w8_7 w11_7 w10_7 w9_7 w12_7 w15_7 w14_7 w13_7 w16_7 w19_7 w18_7 w17_7 w20_7 w23_7 w22_7 w21_7 w24_7 w27_7 w26_7 w25_7 w28_7 w30_7 w29_7 w32_7 w31_7 w3_11 w2_11 w1_11 w4_11 w7_11 w6_11 w5_11 w8_11 w11_11 w10_11 w9_11 w12_11 w15_11 w14_11 w13_11 w16_11 w19_11 w18_11 w17_11 w20_11 w23_11 w22_11 w21_11 w24_11 w27_11 w26_11 w25_11 w28_11 w30_11 w29_11 w32_11 w31_11 w3_15 w2_15 w1_15 w4_15 w7_15 w6_15 w5_15 w8_15 w11_15 w10_15 w9_15 w12_15 w15_15 w14_15 w13_15 w16_15 w19_15 w18_15 w17_15 w20_15 w23_15 w22_15 w21_15 w24_15 w27_15 w26_15 w25_15 w28_15 w30_15 w29_15 w32_15 w31_15 w3_19 w2_19 w1_19 w4_19 w7_19 w6_19 w5_19 w8_19 w11_19 w10_19 w9_19 w12_19 w15_19 w14_19 w13_19 w16_19 w19_19 w18_19 w17_19 w20_19 w23_19 w22_19 w21_19 w24_19 w27_19 w26_19 w25_19 w28_19 w30_19 w29_19 w32_19 w31_19 w3_23 w2_23 w1_23 w4_23 w7_23 w6_23 w5_23 w8_23 w11_23 w10_23 w9_23 w12_23 w15_23 w14_23 w13_23 w16_23 w19_23 w18_23 w17_23 w20_23 w23_23 w22_23 w21_23 w24_23 w27_23 w26_23 w25_23 w28_23 w30_23 w29_23 w32_23 w31_23 w3_27 w2_27 w1_27 w4_27 w7_27 w6_27 w5_27 w8_27 w11_27 w10_27 w9_27 w12_27 w15_27 w14_27 w13_27 w16_27 w19_27 w18_27 w17_27 w20_27 w23_27 w22_27 w21_27 w24_27 w27_27 w26_27 w25_27 w28_27 w30_27 w29_27 w32_27 w31_27 w3_31 w2_31 w1_31 w4_31 w7_31 w6_31 w5_31 w8_31 w11_31 w10_31 w9_31 w12_31 w15_31 w14_31 w13_31 w16_31 w19_31 w18_31 w17_31 w20_31 w23_31 w22_31 w21_31 w24_31 w27_31 w26_31 w25_31 w28_31 w30_31 w29_31 w32_31 w31_31
+.inputs Is4 Is8 Is12 Is16 Is20 Is24 Is28 Is32
+.inputs w4_4 w3_4 w2_4 w1_4 w8_4 w7_4 w6_4 w5_4 w12_4 w11_4 w10_4 w9_4 w16_4 w15_4 w14_4 w13_4 w20_4 w19_4 w18_4 w17_4 w24_4 w23_4 w22_4 w21_4 w28_4 w27_4 w26_4 w25_4 w31_4 w30_4 w29_4 w32_4 w4_8 w3_8 w2_8 w1_8 w8_8 w7_8 w6_8 w5_8 w12_8 w11_8 w10_8 w9_8 w16_8 w15_8 w14_8 w13_8 w20_8 w19_8 w18_8 w17_8 w24_8 w23_8 w22_8 w21_8 w28_8 w27_8 w26_8 w25_8 w31_8 w30_8 w29_8 w32_8 w4_12 w3_12 w2_12 w1_12 w8_12 w7_12 w6_12 w5_12 w12_12 w11_12 w10_12 w9_12 w16_12 w15_12 w14_12 w13_12 w20_12 w19_12 w18_12 w17_12 w24_12 w23_12 w22_12 w21_12 w28_12 w27_12 w26_12 w25_12 w31_12 w30_12 w29_12 w32_12 w4_16 w3_16 w2_16 w1_16 w8_16 w7_16 w6_16 w5_16 w12_16 w11_16 w10_16 w9_16 w16_16 w15_16 w14_16 w13_16 w20_16 w19_16 w18_16 w17_16 w24_16 w23_16 w22_16 w21_16 w28_16 w27_16 w26_16 w25_16 w31_16 w30_16 w29_16 w32_16 w4_20 w3_20 w2_20 w1_20 w8_20 w7_20 w6_20 w5_20 w12_20 w11_20 w10_20 w9_20 w16_20 w15_20 w14_20 w13_20 w20_20 w19_20 w18_20 w17_20 w24_20 w23_20 w22_20 w21_20 w28_20 w27_20 w26_20 w25_20 w31_20 w30_20 w29_20 w32_20 w4_24 w3_24 w2_24 w1_24 w8_24 w7_24 w6_24 w5_24 w12_24 w11_24 w10_24 w9_24 w16_24 w15_24 w14_24 w13_24 w20_24 w19_24 w18_24 w17_24 w24_24 w23_24 w22_24 w21_24 w28_24 w27_24 w26_24 w25_24 w31_24 w30_24 w29_24 w32_24 w4_28 w3_28 w2_28 w1_28 w8_28 w7_28 w6_28 w5_28 w12_28 w11_28 w10_28 w9_28 w16_28 w15_28 w14_28 w13_28 w20_28 w19_28 w18_28 w17_28 w24_28 w23_28 w22_28 w21_28 w28_28 w27_28 w26_28 w25_28 w31_28 w30_28 w29_28 w32_28 w4_32 w3_32 w2_32 w1_32 w8_32 w7_32 w6_32 w5_32 w12_32 w11_32 w10_32 w9_32 w16_32 w15_32 w14_32 w13_32 w20_32 w19_32 w18_32 w17_32 w24_32 w23_32 w22_32 w21_32 w28_32 w27_32 w26_32 w25_32 w31_32 w30_32 w29_32 w32_32
+.outputs Istim1 Istim2 Istim3 Istim4 Istim5 Istim6 Istim7 Istim8 Istim9 Istim10 Istim11 Istim12 Istim13 Istim14 Istim15 Istim16 Istim17 Istim18 Istim19 Istim20 Istim21 Istim22 Istim23 Istim24 Istim25 Istim26 Istim27 Istim28 Istim29 Istim30 Istim31 Istim32
+
+.subckt and in0=Is1 in1=w1_1 out=Is1w1_1
+.subckt and in0=Is2 in1=w1_2 out=Is2w1_2
+.subckt and in0=Is3 in1=w1_3 out=Is3w1_3
+.subckt and in0=Is4 in1=w1_4 out=Is4w1_4
+.subckt and in0=Is5 in1=w1_5 out=Is5w1_5
+.subckt and in0=Is6 in1=w1_6 out=Is6w1_6
+.subckt and in0=Is7 in1=w1_7 out=Is7w1_7
+.subckt and in0=Is8 in1=w1_8 out=Is8w1_8
+.subckt and in0=Is9 in1=w1_9 out=Is9w1_9
+.subckt and in0=Is10 in1=w1_10 out=Is10w1_10
+.subckt and in0=Is11 in1=w1_11 out=Is11w1_11
+.subckt and in0=Is12 in1=w1_12 out=Is12w1_12
+.subckt and in0=Is13 in1=w1_13 out=Is13w1_13
+.subckt and in0=Is14 in1=w1_14 out=Is14w1_14
+.subckt and in0=Is15 in1=w1_15 out=Is15w1_15
+.subckt and in0=Is16 in1=w1_16 out=Is16w1_16
+.subckt and in0=Is17 in1=w1_17 out=Is17w1_17
+.subckt and in0=Is18 in1=w1_18 out=Is18w1_18
+.subckt and in0=Is19 in1=w1_19 out=Is19w1_19
+.subckt and in0=Is20 in1=w1_20 out=Is20w1_20
+.subckt and in0=Is21 in1=w1_21 out=Is21w1_21
+.subckt and in0=Is22 in1=w1_22 out=Is22w1_22
+.subckt and in0=Is23 in1=w1_23 out=Is23w1_23
+.subckt and in0=Is24 in1=w1_24 out=Is24w1_24
+.subckt and in0=Is25 in1=w1_25 out=Is25w1_25
+.subckt and in0=Is26 in1=w1_26 out=Is26w1_26
+.subckt and in0=Is27 in1=w1_27 out=Is27w1_27
+.subckt and in0=Is28 in1=w1_28 out=Is28w1_28
+.subckt and in0=Is29 in1=w1_29 out=Is29w1_29
+.subckt and in0=Is30 in1=w1_30 out=Is30w1_30
+.subckt and in0=Is31 in1=w1_31 out=Is31w1_31
+.subckt and in0=Is32 in1=w1_32 out=Is32w1_32
+.subckt xor32 in0=Is1w1_1 in1=Is2w1_2 in2=Is3w1_3 in3=Is4w1_4 in4=Is5w1_5 in5=Is6w1_6 in6=Is7w1_7 in7=Is8w1_8 in8=Is9w1_9 in9=Is10w1_10 in10=Is11w1_11 in11=Is12w1_12 in12=Is13w1_13 in13=Is14w1_14 in14=Is15w1_15 in15=Is16w1_16 in16=Is17w1_17 in17=Is18w1_18 in18=Is19w1_19 in19=Is20w1_20 in20=Is21w1_21 in21=Is22w1_22 in22=Is23w1_23 in23=Is24w1_24 in24=Is25w1_25 in25=Is26w1_26 in26=Is27w1_27 in27=Is28w1_28 in28=Is29w1_29 in29=Is30w1_30 in30=Is31w1_31 in31=Is32w1_32 out=Istim1
+
+.subckt and in0=Is1 in1=w2_1 out=Is1w2_1
+.subckt and in0=Is2 in1=w2_2 out=Is2w2_2
+.subckt and in0=Is3 in1=w2_3 out=Is3w2_3
+.subckt and in0=Is4 in1=w2_4 out=Is4w2_4
+.subckt and in0=Is5 in1=w2_5 out=Is5w2_5
+.subckt and in0=Is6 in1=w2_6 out=Is6w2_6
+.subckt and in0=Is7 in1=w2_7 out=Is7w2_7
+.subckt and in0=Is8 in1=w2_8 out=Is8w2_8
+.subckt and in0=Is9 in1=w2_9 out=Is9w2_9
+.subckt and in0=Is10 in1=w2_10 out=Is10w2_10
+.subckt and in0=Is11 in1=w2_11 out=Is11w2_11
+.subckt and in0=Is12 in1=w2_12 out=Is12w2_12
+.subckt and in0=Is13 in1=w2_13 out=Is13w2_13
+.subckt and in0=Is14 in1=w2_14 out=Is14w2_14
+.subckt and in0=Is15 in1=w2_15 out=Is15w2_15
+.subckt and in0=Is16 in1=w2_16 out=Is16w2_16
+.subckt and in0=Is17 in1=w2_17 out=Is17w2_17
+.subckt and in0=Is18 in1=w2_18 out=Is18w2_18
+.subckt and in0=Is19 in1=w2_19 out=Is19w2_19
+.subckt and in0=Is20 in1=w2_20 out=Is20w2_20
+.subckt and in0=Is21 in1=w2_21 out=Is21w2_21
+.subckt and in0=Is22 in1=w2_22 out=Is22w2_22
+.subckt and in0=Is23 in1=w2_23 out=Is23w2_23
+.subckt and in0=Is24 in1=w2_24 out=Is24w2_24
+.subckt and in0=Is25 in1=w2_25 out=Is25w2_25
+.subckt and in0=Is26 in1=w2_26 out=Is26w2_26
+.subckt and in0=Is27 in1=w2_27 out=Is27w2_27
+.subckt and in0=Is28 in1=w2_28 out=Is28w2_28
+.subckt and in0=Is29 in1=w2_29 out=Is29w2_29
+.subckt and in0=Is30 in1=w2_30 out=Is30w2_30
+.subckt and in0=Is31 in1=w2_31 out=Is31w2_31
+.subckt and in0=Is32 in1=w2_32 out=Is32w2_32
+.subckt xor32 in0=Is1w2_1 in1=Is2w2_2 in2=Is3w2_3 in3=Is4w2_4 in4=Is5w2_5 in5=Is6w2_6 in6=Is7w2_7 in7=Is8w2_8 in8=Is9w2_9 in9=Is10w2_10 in10=Is11w2_11 in11=Is12w2_12 in12=Is13w2_13 in13=Is14w2_14 in14=Is15w2_15 in15=Is16w2_16 in16=Is17w2_17 in17=Is18w2_18 in18=Is19w2_19 in19=Is20w2_20 in20=Is21w2_21 in21=Is22w2_22 in22=Is23w2_23 in23=Is24w2_24 in24=Is25w2_25 in25=Is26w2_26 in26=Is27w2_27 in27=Is28w2_28 in28=Is29w2_29 in29=Is30w2_30 in30=Is31w2_31 in31=Is32w2_32 out=Istim2
+
+.subckt and in0=Is1 in1=w3_1 out=Is1w3_1
+.subckt and in0=Is2 in1=w3_2 out=Is2w3_2
+.subckt and in0=Is3 in1=w3_3 out=Is3w3_3
+.subckt and in0=Is4 in1=w3_4 out=Is4w3_4
+.subckt and in0=Is5 in1=w3_5 out=Is5w3_5
+.subckt and in0=Is6 in1=w3_6 out=Is6w3_6
+.subckt and in0=Is7 in1=w3_7 out=Is7w3_7
+.subckt and in0=Is8 in1=w3_8 out=Is8w3_8
+.subckt and in0=Is9 in1=w3_9 out=Is9w3_9
+.subckt and in0=Is10 in1=w3_10 out=Is10w3_10
+.subckt and in0=Is11 in1=w3_11 out=Is11w3_11
+.subckt and in0=Is12 in1=w3_12 out=Is12w3_12
+.subckt and in0=Is13 in1=w3_13 out=Is13w3_13
+.subckt and in0=Is14 in1=w3_14 out=Is14w3_14
+.subckt and in0=Is15 in1=w3_15 out=Is15w3_15
+.subckt and in0=Is16 in1=w3_16 out=Is16w3_16
+.subckt and in0=Is17 in1=w3_17 out=Is17w3_17
+.subckt and in0=Is18 in1=w3_18 out=Is18w3_18
+.subckt and in0=Is19 in1=w3_19 out=Is19w3_19
+.subckt and in0=Is20 in1=w3_20 out=Is20w3_20
+.subckt and in0=Is21 in1=w3_21 out=Is21w3_21
+.subckt and in0=Is22 in1=w3_22 out=Is22w3_22
+.subckt and in0=Is23 in1=w3_23 out=Is23w3_23
+.subckt and in0=Is24 in1=w3_24 out=Is24w3_24
+.subckt and in0=Is25 in1=w3_25 out=Is25w3_25
+.subckt and in0=Is26 in1=w3_26 out=Is26w3_26
+.subckt and in0=Is27 in1=w3_27 out=Is27w3_27
+.subckt and in0=Is28 in1=w3_28 out=Is28w3_28
+.subckt and in0=Is29 in1=w3_29 out=Is29w3_29
+.subckt and in0=Is30 in1=w3_30 out=Is30w3_30
+.subckt and in0=Is31 in1=w3_31 out=Is31w3_31
+.subckt and in0=Is32 in1=w3_32 out=Is32w3_32
+.subckt xor32 in0=Is1w3_1 in1=Is2w3_2 in2=Is3w3_3 in3=Is4w3_4 in4=Is5w3_5 in5=Is6w3_6 in6=Is7w3_7 in7=Is8w3_8 in8=Is9w3_9 in9=Is10w3_10 in10=Is11w3_11 in11=Is12w3_12 in12=Is13w3_13 in13=Is14w3_14 in14=Is15w3_15 in15=Is16w3_16 in16=Is17w3_17 in17=Is18w3_18 in18=Is19w3_19 in19=Is20w3_20 in20=Is21w3_21 in21=Is22w3_22 in22=Is23w3_23 in23=Is24w3_24 in24=Is25w3_25 in25=Is26w3_26 in26=Is27w3_27 in27=Is28w3_28 in28=Is29w3_29 in29=Is30w3_30 in30=Is31w3_31 in31=Is32w3_32 out=Istim3
+
+.subckt and in0=Is1 in1=w4_1 out=Is1w4_1
+.subckt and in0=Is2 in1=w4_2 out=Is2w4_2
+.subckt and in0=Is3 in1=w4_3 out=Is3w4_3
+.subckt and in0=Is4 in1=w4_4 out=Is4w4_4
+.subckt and in0=Is5 in1=w4_5 out=Is5w4_5
+.subckt and in0=Is6 in1=w4_6 out=Is6w4_6
+.subckt and in0=Is7 in1=w4_7 out=Is7w4_7
+.subckt and in0=Is8 in1=w4_8 out=Is8w4_8
+.subckt and in0=Is9 in1=w4_9 out=Is9w4_9
+.subckt and in0=Is10 in1=w4_10 out=Is10w4_10
+.subckt and in0=Is11 in1=w4_11 out=Is11w4_11
+.subckt and in0=Is12 in1=w4_12 out=Is12w4_12
+.subckt and in0=Is13 in1=w4_13 out=Is13w4_13
+.subckt and in0=Is14 in1=w4_14 out=Is14w4_14
+.subckt and in0=Is15 in1=w4_15 out=Is15w4_15
+.subckt and in0=Is16 in1=w4_16 out=Is16w4_16
+.subckt and in0=Is17 in1=w4_17 out=Is17w4_17
+.subckt and in0=Is18 in1=w4_18 out=Is18w4_18
+.subckt and in0=Is19 in1=w4_19 out=Is19w4_19
+.subckt and in0=Is20 in1=w4_20 out=Is20w4_20
+.subckt and in0=Is21 in1=w4_21 out=Is21w4_21
+.subckt and in0=Is22 in1=w4_22 out=Is22w4_22
+.subckt and in0=Is23 in1=w4_23 out=Is23w4_23
+.subckt and in0=Is24 in1=w4_24 out=Is24w4_24
+.subckt and in0=Is25 in1=w4_25 out=Is25w4_25
+.subckt and in0=Is26 in1=w4_26 out=Is26w4_26
+.subckt and in0=Is27 in1=w4_27 out=Is27w4_27
+.subckt and in0=Is28 in1=w4_28 out=Is28w4_28
+.subckt and in0=Is29 in1=w4_29 out=Is29w4_29
+.subckt and in0=Is30 in1=w4_30 out=Is30w4_30
+.subckt and in0=Is31 in1=w4_31 out=Is31w4_31
+.subckt and in0=Is32 in1=w4_32 out=Is32w4_32
+.subckt xor32 in0=Is1w4_1 in1=Is2w4_2 in2=Is3w4_3 in3=Is4w4_4 in4=Is5w4_5 in5=Is6w4_6 in6=Is7w4_7 in7=Is8w4_8 in8=Is9w4_9 in9=Is10w4_10 in10=Is11w4_11 in11=Is12w4_12 in12=Is13w4_13 in13=Is14w4_14 in14=Is15w4_15 in15=Is16w4_16 in16=Is17w4_17 in17=Is18w4_18 in18=Is19w4_19 in19=Is20w4_20 in20=Is21w4_21 in21=Is22w4_22 in22=Is23w4_23 in23=Is24w4_24 in24=Is25w4_25 in25=Is26w4_26 in26=Is27w4_27 in27=Is28w4_28 in28=Is29w4_29 in29=Is30w4_30 in30=Is31w4_31 in31=Is32w4_32 out=Istim4
+
+.subckt and in0=Is1 in1=w5_1 out=Is1w5_1
+.subckt and in0=Is2 in1=w5_2 out=Is2w5_2
+.subckt and in0=Is3 in1=w5_3 out=Is3w5_3
+.subckt and in0=Is4 in1=w5_4 out=Is4w5_4
+.subckt and in0=Is5 in1=w5_5 out=Is5w5_5
+.subckt and in0=Is6 in1=w5_6 out=Is6w5_6
+.subckt and in0=Is7 in1=w5_7 out=Is7w5_7
+.subckt and in0=Is8 in1=w5_8 out=Is8w5_8
+.subckt and in0=Is9 in1=w5_9 out=Is9w5_9
+.subckt and in0=Is10 in1=w5_10 out=Is10w5_10
+.subckt and in0=Is11 in1=w5_11 out=Is11w5_11
+.subckt and in0=Is12 in1=w5_12 out=Is12w5_12
+.subckt and in0=Is13 in1=w5_13 out=Is13w5_13
+.subckt and in0=Is14 in1=w5_14 out=Is14w5_14
+.subckt and in0=Is15 in1=w5_15 out=Is15w5_15
+.subckt and in0=Is16 in1=w5_16 out=Is16w5_16
+.subckt and in0=Is17 in1=w5_17 out=Is17w5_17
+.subckt and in0=Is18 in1=w5_18 out=Is18w5_18
+.subckt and in0=Is19 in1=w5_19 out=Is19w5_19
+.subckt and in0=Is20 in1=w5_20 out=Is20w5_20
+.subckt and in0=Is21 in1=w5_21 out=Is21w5_21
+.subckt and in0=Is22 in1=w5_22 out=Is22w5_22
+.subckt and in0=Is23 in1=w5_23 out=Is23w5_23
+.subckt and in0=Is24 in1=w5_24 out=Is24w5_24
+.subckt and in0=Is25 in1=w5_25 out=Is25w5_25
+.subckt and in0=Is26 in1=w5_26 out=Is26w5_26
+.subckt and in0=Is27 in1=w5_27 out=Is27w5_27
+.subckt and in0=Is28 in1=w5_28 out=Is28w5_28
+.subckt and in0=Is29 in1=w5_29 out=Is29w5_29
+.subckt and in0=Is30 in1=w5_30 out=Is30w5_30
+.subckt and in0=Is31 in1=w5_31 out=Is31w5_31
+.subckt and in0=Is32 in1=w5_32 out=Is32w5_32
+.subckt xor32 in0=Is1w5_1 in1=Is2w5_2 in2=Is3w5_3 in3=Is4w5_4 in4=Is5w5_5 in5=Is6w5_6 in6=Is7w5_7 in7=Is8w5_8 in8=Is9w5_9 in9=Is10w5_10 in10=Is11w5_11 in11=Is12w5_12 in12=Is13w5_13 in13=Is14w5_14 in14=Is15w5_15 in15=Is16w5_16 in16=Is17w5_17 in17=Is18w5_18 in18=Is19w5_19 in19=Is20w5_20 in20=Is21w5_21 in21=Is22w5_22 in22=Is23w5_23 in23=Is24w5_24 in24=Is25w5_25 in25=Is26w5_26 in26=Is27w5_27 in27=Is28w5_28 in28=Is29w5_29 in29=Is30w5_30 in30=Is31w5_31 in31=Is32w5_32 out=Istim5
+
+.subckt and in0=Is1 in1=w6_1 out=Is1w6_1
+.subckt and in0=Is2 in1=w6_2 out=Is2w6_2
+.subckt and in0=Is3 in1=w6_3 out=Is3w6_3
+.subckt and in0=Is4 in1=w6_4 out=Is4w6_4
+.subckt and in0=Is5 in1=w6_5 out=Is5w6_5
+.subckt and in0=Is6 in1=w6_6 out=Is6w6_6
+.subckt and in0=Is7 in1=w6_7 out=Is7w6_7
+.subckt and in0=Is8 in1=w6_8 out=Is8w6_8
+.subckt and in0=Is9 in1=w6_9 out=Is9w6_9
+.subckt and in0=Is10 in1=w6_10 out=Is10w6_10
+.subckt and in0=Is11 in1=w6_11 out=Is11w6_11
+.subckt and in0=Is12 in1=w6_12 out=Is12w6_12
+.subckt and in0=Is13 in1=w6_13 out=Is13w6_13
+.subckt and in0=Is14 in1=w6_14 out=Is14w6_14
+.subckt and in0=Is15 in1=w6_15 out=Is15w6_15
+.subckt and in0=Is16 in1=w6_16 out=Is16w6_16
+.subckt and in0=Is17 in1=w6_17 out=Is17w6_17
+.subckt and in0=Is18 in1=w6_18 out=Is18w6_18
+.subckt and in0=Is19 in1=w6_19 out=Is19w6_19
+.subckt and in0=Is20 in1=w6_20 out=Is20w6_20
+.subckt and in0=Is21 in1=w6_21 out=Is21w6_21
+.subckt and in0=Is22 in1=w6_22 out=Is22w6_22
+.subckt and in0=Is23 in1=w6_23 out=Is23w6_23
+.subckt and in0=Is24 in1=w6_24 out=Is24w6_24
+.subckt and in0=Is25 in1=w6_25 out=Is25w6_25
+.subckt and in0=Is26 in1=w6_26 out=Is26w6_26
+.subckt and in0=Is27 in1=w6_27 out=Is27w6_27
+.subckt and in0=Is28 in1=w6_28 out=Is28w6_28
+.subckt and in0=Is29 in1=w6_29 out=Is29w6_29
+.subckt and in0=Is30 in1=w6_30 out=Is30w6_30
+.subckt and in0=Is31 in1=w6_31 out=Is31w6_31
+.subckt and in0=Is32 in1=w6_32 out=Is32w6_32
+.subckt xor32 in0=Is1w6_1 in1=Is2w6_2 in2=Is3w6_3 in3=Is4w6_4 in4=Is5w6_5 in5=Is6w6_6 in6=Is7w6_7 in7=Is8w6_8 in8=Is9w6_9 in9=Is10w6_10 in10=Is11w6_11 in11=Is12w6_12 in12=Is13w6_13 in13=Is14w6_14 in14=Is15w6_15 in15=Is16w6_16 in16=Is17w6_17 in17=Is18w6_18 in18=Is19w6_19 in19=Is20w6_20 in20=Is21w6_21 in21=Is22w6_22 in22=Is23w6_23 in23=Is24w6_24 in24=Is25w6_25 in25=Is26w6_26 in26=Is27w6_27 in27=Is28w6_28 in28=Is29w6_29 in29=Is30w6_30 in30=Is31w6_31 in31=Is32w6_32 out=Istim6
+
+.subckt and in0=Is1 in1=w7_1 out=Is1w7_1
+.subckt and in0=Is2 in1=w7_2 out=Is2w7_2
+.subckt and in0=Is3 in1=w7_3 out=Is3w7_3
+.subckt and in0=Is4 in1=w7_4 out=Is4w7_4
+.subckt and in0=Is5 in1=w7_5 out=Is5w7_5
+.subckt and in0=Is6 in1=w7_6 out=Is6w7_6
+.subckt and in0=Is7 in1=w7_7 out=Is7w7_7
+.subckt and in0=Is8 in1=w7_8 out=Is8w7_8
+.subckt and in0=Is9 in1=w7_9 out=Is9w7_9
+.subckt and in0=Is10 in1=w7_10 out=Is10w7_10
+.subckt and in0=Is11 in1=w7_11 out=Is11w7_11
+.subckt and in0=Is12 in1=w7_12 out=Is12w7_12
+.subckt and in0=Is13 in1=w7_13 out=Is13w7_13
+.subckt and in0=Is14 in1=w7_14 out=Is14w7_14
+.subckt and in0=Is15 in1=w7_15 out=Is15w7_15
+.subckt and in0=Is16 in1=w7_16 out=Is16w7_16
+.subckt and in0=Is17 in1=w7_17 out=Is17w7_17
+.subckt and in0=Is18 in1=w7_18 out=Is18w7_18
+.subckt and in0=Is19 in1=w7_19 out=Is19w7_19
+.subckt and in0=Is20 in1=w7_20 out=Is20w7_20
+.subckt and in0=Is21 in1=w7_21 out=Is21w7_21
+.subckt and in0=Is22 in1=w7_22 out=Is22w7_22
+.subckt and in0=Is23 in1=w7_23 out=Is23w7_23
+.subckt and in0=Is24 in1=w7_24 out=Is24w7_24
+.subckt and in0=Is25 in1=w7_25 out=Is25w7_25
+.subckt and in0=Is26 in1=w7_26 out=Is26w7_26
+.subckt and in0=Is27 in1=w7_27 out=Is27w7_27
+.subckt and in0=Is28 in1=w7_28 out=Is28w7_28
+.subckt and in0=Is29 in1=w7_29 out=Is29w7_29
+.subckt and in0=Is30 in1=w7_30 out=Is30w7_30
+.subckt and in0=Is31 in1=w7_31 out=Is31w7_31
+.subckt and in0=Is32 in1=w7_32 out=Is32w7_32
+.subckt xor32 in0=Is1w7_1 in1=Is2w7_2 in2=Is3w7_3 in3=Is4w7_4 in4=Is5w7_5 in5=Is6w7_6 in6=Is7w7_7 in7=Is8w7_8 in8=Is9w7_9 in9=Is10w7_10 in10=Is11w7_11 in11=Is12w7_12 in12=Is13w7_13 in13=Is14w7_14 in14=Is15w7_15 in15=Is16w7_16 in16=Is17w7_17 in17=Is18w7_18 in18=Is19w7_19 in19=Is20w7_20 in20=Is21w7_21 in21=Is22w7_22 in22=Is23w7_23 in23=Is24w7_24 in24=Is25w7_25 in25=Is26w7_26 in26=Is27w7_27 in27=Is28w7_28 in28=Is29w7_29 in29=Is30w7_30 in30=Is31w7_31 in31=Is32w7_32 out=Istim7
+
+.subckt and in0=Is1 in1=w8_1 out=Is1w8_1
+.subckt and in0=Is2 in1=w8_2 out=Is2w8_2
+.subckt and in0=Is3 in1=w8_3 out=Is3w8_3
+.subckt and in0=Is4 in1=w8_4 out=Is4w8_4
+.subckt and in0=Is5 in1=w8_5 out=Is5w8_5
+.subckt and in0=Is6 in1=w8_6 out=Is6w8_6
+.subckt and in0=Is7 in1=w8_7 out=Is7w8_7
+.subckt and in0=Is8 in1=w8_8 out=Is8w8_8
+.subckt and in0=Is9 in1=w8_9 out=Is9w8_9
+.subckt and in0=Is10 in1=w8_10 out=Is10w8_10
+.subckt and in0=Is11 in1=w8_11 out=Is11w8_11
+.subckt and in0=Is12 in1=w8_12 out=Is12w8_12
+.subckt and in0=Is13 in1=w8_13 out=Is13w8_13
+.subckt and in0=Is14 in1=w8_14 out=Is14w8_14
+.subckt and in0=Is15 in1=w8_15 out=Is15w8_15
+.subckt and in0=Is16 in1=w8_16 out=Is16w8_16
+.subckt and in0=Is17 in1=w8_17 out=Is17w8_17
+.subckt and in0=Is18 in1=w8_18 out=Is18w8_18
+.subckt and in0=Is19 in1=w8_19 out=Is19w8_19
+.subckt and in0=Is20 in1=w8_20 out=Is20w8_20
+.subckt and in0=Is21 in1=w8_21 out=Is21w8_21
+.subckt and in0=Is22 in1=w8_22 out=Is22w8_22
+.subckt and in0=Is23 in1=w8_23 out=Is23w8_23
+.subckt and in0=Is24 in1=w8_24 out=Is24w8_24
+.subckt and in0=Is25 in1=w8_25 out=Is25w8_25
+.subckt and in0=Is26 in1=w8_26 out=Is26w8_26
+.subckt and in0=Is27 in1=w8_27 out=Is27w8_27
+.subckt and in0=Is28 in1=w8_28 out=Is28w8_28
+.subckt and in0=Is29 in1=w8_29 out=Is29w8_29
+.subckt and in0=Is30 in1=w8_30 out=Is30w8_30
+.subckt and in0=Is31 in1=w8_31 out=Is31w8_31
+.subckt and in0=Is32 in1=w8_32 out=Is32w8_32
+.subckt xor32 in0=Is1w8_1 in1=Is2w8_2 in2=Is3w8_3 in3=Is4w8_4 in4=Is5w8_5 in5=Is6w8_6 in6=Is7w8_7 in7=Is8w8_8 in8=Is9w8_9 in9=Is10w8_10 in10=Is11w8_11 in11=Is12w8_12 in12=Is13w8_13 in13=Is14w8_14 in14=Is15w8_15 in15=Is16w8_16 in16=Is17w8_17 in17=Is18w8_18 in18=Is19w8_19 in19=Is20w8_20 in20=Is21w8_21 in21=Is22w8_22 in22=Is23w8_23 in23=Is24w8_24 in24=Is25w8_25 in25=Is26w8_26 in26=Is27w8_27 in27=Is28w8_28 in28=Is29w8_29 in29=Is30w8_30 in30=Is31w8_31 in31=Is32w8_32 out=Istim8
+
+.subckt and in0=Is1 in1=w9_1 out=Is1w9_1
+.subckt and in0=Is2 in1=w9_2 out=Is2w9_2
+.subckt and in0=Is3 in1=w9_3 out=Is3w9_3
+.subckt and in0=Is4 in1=w9_4 out=Is4w9_4
+.subckt and in0=Is5 in1=w9_5 out=Is5w9_5
+.subckt and in0=Is6 in1=w9_6 out=Is6w9_6
+.subckt and in0=Is7 in1=w9_7 out=Is7w9_7
+.subckt and in0=Is8 in1=w9_8 out=Is8w9_8
+.subckt and in0=Is9 in1=w9_9 out=Is9w9_9
+.subckt and in0=Is10 in1=w9_10 out=Is10w9_10
+.subckt and in0=Is11 in1=w9_11 out=Is11w9_11
+.subckt and in0=Is12 in1=w9_12 out=Is12w9_12
+.subckt and in0=Is13 in1=w9_13 out=Is13w9_13
+.subckt and in0=Is14 in1=w9_14 out=Is14w9_14
+.subckt and in0=Is15 in1=w9_15 out=Is15w9_15
+.subckt and in0=Is16 in1=w9_16 out=Is16w9_16
+.subckt and in0=Is17 in1=w9_17 out=Is17w9_17
+.subckt and in0=Is18 in1=w9_18 out=Is18w9_18
+.subckt and in0=Is19 in1=w9_19 out=Is19w9_19
+.subckt and in0=Is20 in1=w9_20 out=Is20w9_20
+.subckt and in0=Is21 in1=w9_21 out=Is21w9_21
+.subckt and in0=Is22 in1=w9_22 out=Is22w9_22
+.subckt and in0=Is23 in1=w9_23 out=Is23w9_23
+.subckt and in0=Is24 in1=w9_24 out=Is24w9_24
+.subckt and in0=Is25 in1=w9_25 out=Is25w9_25
+.subckt and in0=Is26 in1=w9_26 out=Is26w9_26
+.subckt and in0=Is27 in1=w9_27 out=Is27w9_27
+.subckt and in0=Is28 in1=w9_28 out=Is28w9_28
+.subckt and in0=Is29 in1=w9_29 out=Is29w9_29
+.subckt and in0=Is30 in1=w9_30 out=Is30w9_30
+.subckt and in0=Is31 in1=w9_31 out=Is31w9_31
+.subckt and in0=Is32 in1=w9_32 out=Is32w9_32
+.subckt xor32 in0=Is1w9_1 in1=Is2w9_2 in2=Is3w9_3 in3=Is4w9_4 in4=Is5w9_5 in5=Is6w9_6 in6=Is7w9_7 in7=Is8w9_8 in8=Is9w9_9 in9=Is10w9_10 in10=Is11w9_11 in11=Is12w9_12 in12=Is13w9_13 in13=Is14w9_14 in14=Is15w9_15 in15=Is16w9_16 in16=Is17w9_17 in17=Is18w9_18 in18=Is19w9_19 in19=Is20w9_20 in20=Is21w9_21 in21=Is22w9_22 in22=Is23w9_23 in23=Is24w9_24 in24=Is25w9_25 in25=Is26w9_26 in26=Is27w9_27 in27=Is28w9_28 in28=Is29w9_29 in29=Is30w9_30 in30=Is31w9_31 in31=Is32w9_32 out=Istim9
+
+.subckt and in0=Is1 in1=w10_1 out=Is1w10_1
+.subckt and in0=Is2 in1=w10_2 out=Is2w10_2
+.subckt and in0=Is3 in1=w10_3 out=Is3w10_3
+.subckt and in0=Is4 in1=w10_4 out=Is4w10_4
+.subckt and in0=Is5 in1=w10_5 out=Is5w10_5
+.subckt and in0=Is6 in1=w10_6 out=Is6w10_6
+.subckt and in0=Is7 in1=w10_7 out=Is7w10_7
+.subckt and in0=Is8 in1=w10_8 out=Is8w10_8
+.subckt and in0=Is9 in1=w10_9 out=Is9w10_9
+.subckt and in0=Is10 in1=w10_10 out=Is10w10_10
+.subckt and in0=Is11 in1=w10_11 out=Is11w10_11
+.subckt and in0=Is12 in1=w10_12 out=Is12w10_12
+.subckt and in0=Is13 in1=w10_13 out=Is13w10_13
+.subckt and in0=Is14 in1=w10_14 out=Is14w10_14
+.subckt and in0=Is15 in1=w10_15 out=Is15w10_15
+.subckt and in0=Is16 in1=w10_16 out=Is16w10_16
+.subckt and in0=Is17 in1=w10_17 out=Is17w10_17
+.subckt and in0=Is18 in1=w10_18 out=Is18w10_18
+.subckt and in0=Is19 in1=w10_19 out=Is19w10_19
+.subckt and in0=Is20 in1=w10_20 out=Is20w10_20
+.subckt and in0=Is21 in1=w10_21 out=Is21w10_21
+.subckt and in0=Is22 in1=w10_22 out=Is22w10_22
+.subckt and in0=Is23 in1=w10_23 out=Is23w10_23
+.subckt and in0=Is24 in1=w10_24 out=Is24w10_24
+.subckt and in0=Is25 in1=w10_25 out=Is25w10_25
+.subckt and in0=Is26 in1=w10_26 out=Is26w10_26
+.subckt and in0=Is27 in1=w10_27 out=Is27w10_27
+.subckt and in0=Is28 in1=w10_28 out=Is28w10_28
+.subckt and in0=Is29 in1=w10_29 out=Is29w10_29
+.subckt and in0=Is30 in1=w10_30 out=Is30w10_30
+.subckt and in0=Is31 in1=w10_31 out=Is31w10_31
+.subckt and in0=Is32 in1=w10_32 out=Is32w10_32
+.subckt xor32 in0=Is1w10_1 in1=Is2w10_2 in2=Is3w10_3 in3=Is4w10_4 in4=Is5w10_5 in5=Is6w10_6 in6=Is7w10_7 in7=Is8w10_8 in8=Is9w10_9 in9=Is10w10_10 in10=Is11w10_11 in11=Is12w10_12 in12=Is13w10_13 in13=Is14w10_14 in14=Is15w10_15 in15=Is16w10_16 in16=Is17w10_17 in17=Is18w10_18 in18=Is19w10_19 in19=Is20w10_20 in20=Is21w10_21 in21=Is22w10_22 in22=Is23w10_23 in23=Is24w10_24 in24=Is25w10_25 in25=Is26w10_26 in26=Is27w10_27 in27=Is28w10_28 in28=Is29w10_29 in29=Is30w10_30 in30=Is31w10_31 in31=Is32w10_32 out=Istim10
+
+.subckt and in0=Is1 in1=w11_1 out=Is1w11_1
+.subckt and in0=Is2 in1=w11_2 out=Is2w11_2
+.subckt and in0=Is3 in1=w11_3 out=Is3w11_3
+.subckt and in0=Is4 in1=w11_4 out=Is4w11_4
+.subckt and in0=Is5 in1=w11_5 out=Is5w11_5
+.subckt and in0=Is6 in1=w11_6 out=Is6w11_6
+.subckt and in0=Is7 in1=w11_7 out=Is7w11_7
+.subckt and in0=Is8 in1=w11_8 out=Is8w11_8
+.subckt and in0=Is9 in1=w11_9 out=Is9w11_9
+.subckt and in0=Is10 in1=w11_10 out=Is10w11_10
+.subckt and in0=Is11 in1=w11_11 out=Is11w11_11
+.subckt and in0=Is12 in1=w11_12 out=Is12w11_12
+.subckt and in0=Is13 in1=w11_13 out=Is13w11_13
+.subckt and in0=Is14 in1=w11_14 out=Is14w11_14
+.subckt and in0=Is15 in1=w11_15 out=Is15w11_15
+.subckt and in0=Is16 in1=w11_16 out=Is16w11_16
+.subckt and in0=Is17 in1=w11_17 out=Is17w11_17
+.subckt and in0=Is18 in1=w11_18 out=Is18w11_18
+.subckt and in0=Is19 in1=w11_19 out=Is19w11_19
+.subckt and in0=Is20 in1=w11_20 out=Is20w11_20
+.subckt and in0=Is21 in1=w11_21 out=Is21w11_21
+.subckt and in0=Is22 in1=w11_22 out=Is22w11_22
+.subckt and in0=Is23 in1=w11_23 out=Is23w11_23
+.subckt and in0=Is24 in1=w11_24 out=Is24w11_24
+.subckt and in0=Is25 in1=w11_25 out=Is25w11_25
+.subckt and in0=Is26 in1=w11_26 out=Is26w11_26
+.subckt and in0=Is27 in1=w11_27 out=Is27w11_27
+.subckt and in0=Is28 in1=w11_28 out=Is28w11_28
+.subckt and in0=Is29 in1=w11_29 out=Is29w11_29
+.subckt and in0=Is30 in1=w11_30 out=Is30w11_30
+.subckt and in0=Is31 in1=w11_31 out=Is31w11_31
+.subckt and in0=Is32 in1=w11_32 out=Is32w11_32
+.subckt xor32 in0=Is1w11_1 in1=Is2w11_2 in2=Is3w11_3 in3=Is4w11_4 in4=Is5w11_5 in5=Is6w11_6 in6=Is7w11_7 in7=Is8w11_8 in8=Is9w11_9 in9=Is10w11_10 in10=Is11w11_11 in11=Is12w11_12 in12=Is13w11_13 in13=Is14w11_14 in14=Is15w11_15 in15=Is16w11_16 in16=Is17w11_17 in17=Is18w11_18 in18=Is19w11_19 in19=Is20w11_20 in20=Is21w11_21 in21=Is22w11_22 in22=Is23w11_23 in23=Is24w11_24 in24=Is25w11_25 in25=Is26w11_26 in26=Is27w11_27 in27=Is28w11_28 in28=Is29w11_29 in29=Is30w11_30 in30=Is31w11_31 in31=Is32w11_32 out=Istim11
+
+.subckt and in0=Is1 in1=w12_1 out=Is1w12_1
+.subckt and in0=Is2 in1=w12_2 out=Is2w12_2
+.subckt and in0=Is3 in1=w12_3 out=Is3w12_3
+.subckt and in0=Is4 in1=w12_4 out=Is4w12_4
+.subckt and in0=Is5 in1=w12_5 out=Is5w12_5
+.subckt and in0=Is6 in1=w12_6 out=Is6w12_6
+.subckt and in0=Is7 in1=w12_7 out=Is7w12_7
+.subckt and in0=Is8 in1=w12_8 out=Is8w12_8
+.subckt and in0=Is9 in1=w12_9 out=Is9w12_9
+.subckt and in0=Is10 in1=w12_10 out=Is10w12_10
+.subckt and in0=Is11 in1=w12_11 out=Is11w12_11
+.subckt and in0=Is12 in1=w12_12 out=Is12w12_12
+.subckt and in0=Is13 in1=w12_13 out=Is13w12_13
+.subckt and in0=Is14 in1=w12_14 out=Is14w12_14
+.subckt and in0=Is15 in1=w12_15 out=Is15w12_15
+.subckt and in0=Is16 in1=w12_16 out=Is16w12_16
+.subckt and in0=Is17 in1=w12_17 out=Is17w12_17
+.subckt and in0=Is18 in1=w12_18 out=Is18w12_18
+.subckt and in0=Is19 in1=w12_19 out=Is19w12_19
+.subckt and in0=Is20 in1=w12_20 out=Is20w12_20
+.subckt and in0=Is21 in1=w12_21 out=Is21w12_21
+.subckt and in0=Is22 in1=w12_22 out=Is22w12_22
+.subckt and in0=Is23 in1=w12_23 out=Is23w12_23
+.subckt and in0=Is24 in1=w12_24 out=Is24w12_24
+.subckt and in0=Is25 in1=w12_25 out=Is25w12_25
+.subckt and in0=Is26 in1=w12_26 out=Is26w12_26
+.subckt and in0=Is27 in1=w12_27 out=Is27w12_27
+.subckt and in0=Is28 in1=w12_28 out=Is28w12_28
+.subckt and in0=Is29 in1=w12_29 out=Is29w12_29
+.subckt and in0=Is30 in1=w12_30 out=Is30w12_30
+.subckt and in0=Is31 in1=w12_31 out=Is31w12_31
+.subckt and in0=Is32 in1=w12_32 out=Is32w12_32
+.subckt xor32 in0=Is1w12_1 in1=Is2w12_2 in2=Is3w12_3 in3=Is4w12_4 in4=Is5w12_5 in5=Is6w12_6 in6=Is7w12_7 in7=Is8w12_8 in8=Is9w12_9 in9=Is10w12_10 in10=Is11w12_11 in11=Is12w12_12 in12=Is13w12_13 in13=Is14w12_14 in14=Is15w12_15 in15=Is16w12_16 in16=Is17w12_17 in17=Is18w12_18 in18=Is19w12_19 in19=Is20w12_20 in20=Is21w12_21 in21=Is22w12_22 in22=Is23w12_23 in23=Is24w12_24 in24=Is25w12_25 in25=Is26w12_26 in26=Is27w12_27 in27=Is28w12_28 in28=Is29w12_29 in29=Is30w12_30 in30=Is31w12_31 in31=Is32w12_32 out=Istim12
+
+.subckt and in0=Is1 in1=w13_1 out=Is1w13_1
+.subckt and in0=Is2 in1=w13_2 out=Is2w13_2
+.subckt and in0=Is3 in1=w13_3 out=Is3w13_3
+.subckt and in0=Is4 in1=w13_4 out=Is4w13_4
+.subckt and in0=Is5 in1=w13_5 out=Is5w13_5
+.subckt and in0=Is6 in1=w13_6 out=Is6w13_6
+.subckt and in0=Is7 in1=w13_7 out=Is7w13_7
+.subckt and in0=Is8 in1=w13_8 out=Is8w13_8
+.subckt and in0=Is9 in1=w13_9 out=Is9w13_9
+.subckt and in0=Is10 in1=w13_10 out=Is10w13_10
+.subckt and in0=Is11 in1=w13_11 out=Is11w13_11
+.subckt and in0=Is12 in1=w13_12 out=Is12w13_12
+.subckt and in0=Is13 in1=w13_13 out=Is13w13_13
+.subckt and in0=Is14 in1=w13_14 out=Is14w13_14
+.subckt and in0=Is15 in1=w13_15 out=Is15w13_15
+.subckt and in0=Is16 in1=w13_16 out=Is16w13_16
+.subckt and in0=Is17 in1=w13_17 out=Is17w13_17
+.subckt and in0=Is18 in1=w13_18 out=Is18w13_18
+.subckt and in0=Is19 in1=w13_19 out=Is19w13_19
+.subckt and in0=Is20 in1=w13_20 out=Is20w13_20
+.subckt and in0=Is21 in1=w13_21 out=Is21w13_21
+.subckt and in0=Is22 in1=w13_22 out=Is22w13_22
+.subckt and in0=Is23 in1=w13_23 out=Is23w13_23
+.subckt and in0=Is24 in1=w13_24 out=Is24w13_24
+.subckt and in0=Is25 in1=w13_25 out=Is25w13_25
+.subckt and in0=Is26 in1=w13_26 out=Is26w13_26
+.subckt and in0=Is27 in1=w13_27 out=Is27w13_27
+.subckt and in0=Is28 in1=w13_28 out=Is28w13_28
+.subckt and in0=Is29 in1=w13_29 out=Is29w13_29
+.subckt and in0=Is30 in1=w13_30 out=Is30w13_30
+.subckt and in0=Is31 in1=w13_31 out=Is31w13_31
+.subckt and in0=Is32 in1=w13_32 out=Is32w13_32
+.subckt xor32 in0=Is1w13_1 in1=Is2w13_2 in2=Is3w13_3 in3=Is4w13_4 in4=Is5w13_5 in5=Is6w13_6 in6=Is7w13_7 in7=Is8w13_8 in8=Is9w13_9 in9=Is10w13_10 in10=Is11w13_11 in11=Is12w13_12 in12=Is13w13_13 in13=Is14w13_14 in14=Is15w13_15 in15=Is16w13_16 in16=Is17w13_17 in17=Is18w13_18 in18=Is19w13_19 in19=Is20w13_20 in20=Is21w13_21 in21=Is22w13_22 in22=Is23w13_23 in23=Is24w13_24 in24=Is25w13_25 in25=Is26w13_26 in26=Is27w13_27 in27=Is28w13_28 in28=Is29w13_29 in29=Is30w13_30 in30=Is31w13_31 in31=Is32w13_32 out=Istim13
+
+.subckt and in0=Is1 in1=w14_1 out=Is1w14_1
+.subckt and in0=Is2 in1=w14_2 out=Is2w14_2
+.subckt and in0=Is3 in1=w14_3 out=Is3w14_3
+.subckt and in0=Is4 in1=w14_4 out=Is4w14_4
+.subckt and in0=Is5 in1=w14_5 out=Is5w14_5
+.subckt and in0=Is6 in1=w14_6 out=Is6w14_6
+.subckt and in0=Is7 in1=w14_7 out=Is7w14_7
+.subckt and in0=Is8 in1=w14_8 out=Is8w14_8
+.subckt and in0=Is9 in1=w14_9 out=Is9w14_9
+.subckt and in0=Is10 in1=w14_10 out=Is10w14_10
+.subckt and in0=Is11 in1=w14_11 out=Is11w14_11
+.subckt and in0=Is12 in1=w14_12 out=Is12w14_12
+.subckt and in0=Is13 in1=w14_13 out=Is13w14_13
+.subckt and in0=Is14 in1=w14_14 out=Is14w14_14
+.subckt and in0=Is15 in1=w14_15 out=Is15w14_15
+.subckt and in0=Is16 in1=w14_16 out=Is16w14_16
+.subckt and in0=Is17 in1=w14_17 out=Is17w14_17
+.subckt and in0=Is18 in1=w14_18 out=Is18w14_18
+.subckt and in0=Is19 in1=w14_19 out=Is19w14_19
+.subckt and in0=Is20 in1=w14_20 out=Is20w14_20
+.subckt and in0=Is21 in1=w14_21 out=Is21w14_21
+.subckt and in0=Is22 in1=w14_22 out=Is22w14_22
+.subckt and in0=Is23 in1=w14_23 out=Is23w14_23
+.subckt and in0=Is24 in1=w14_24 out=Is24w14_24
+.subckt and in0=Is25 in1=w14_25 out=Is25w14_25
+.subckt and in0=Is26 in1=w14_26 out=Is26w14_26
+.subckt and in0=Is27 in1=w14_27 out=Is27w14_27
+.subckt and in0=Is28 in1=w14_28 out=Is28w14_28
+.subckt and in0=Is29 in1=w14_29 out=Is29w14_29
+.subckt and in0=Is30 in1=w14_30 out=Is30w14_30
+.subckt and in0=Is31 in1=w14_31 out=Is31w14_31
+.subckt and in0=Is32 in1=w14_32 out=Is32w14_32
+.subckt xor32 in0=Is1w14_1 in1=Is2w14_2 in2=Is3w14_3 in3=Is4w14_4 in4=Is5w14_5 in5=Is6w14_6 in6=Is7w14_7 in7=Is8w14_8 in8=Is9w14_9 in9=Is10w14_10 in10=Is11w14_11 in11=Is12w14_12 in12=Is13w14_13 in13=Is14w14_14 in14=Is15w14_15 in15=Is16w14_16 in16=Is17w14_17 in17=Is18w14_18 in18=Is19w14_19 in19=Is20w14_20 in20=Is21w14_21 in21=Is22w14_22 in22=Is23w14_23 in23=Is24w14_24 in24=Is25w14_25 in25=Is26w14_26 in26=Is27w14_27 in27=Is28w14_28 in28=Is29w14_29 in29=Is30w14_30 in30=Is31w14_31 in31=Is32w14_32 out=Istim14
+
+.subckt and in0=Is1 in1=w15_1 out=Is1w15_1
+.subckt and in0=Is2 in1=w15_2 out=Is2w15_2
+.subckt and in0=Is3 in1=w15_3 out=Is3w15_3
+.subckt and in0=Is4 in1=w15_4 out=Is4w15_4
+.subckt and in0=Is5 in1=w15_5 out=Is5w15_5
+.subckt and in0=Is6 in1=w15_6 out=Is6w15_6
+.subckt and in0=Is7 in1=w15_7 out=Is7w15_7
+.subckt and in0=Is8 in1=w15_8 out=Is8w15_8
+.subckt and in0=Is9 in1=w15_9 out=Is9w15_9
+.subckt and in0=Is10 in1=w15_10 out=Is10w15_10
+.subckt and in0=Is11 in1=w15_11 out=Is11w15_11
+.subckt and in0=Is12 in1=w15_12 out=Is12w15_12
+.subckt and in0=Is13 in1=w15_13 out=Is13w15_13
+.subckt and in0=Is14 in1=w15_14 out=Is14w15_14
+.subckt and in0=Is15 in1=w15_15 out=Is15w15_15
+.subckt and in0=Is16 in1=w15_16 out=Is16w15_16
+.subckt and in0=Is17 in1=w15_17 out=Is17w15_17
+.subckt and in0=Is18 in1=w15_18 out=Is18w15_18
+.subckt and in0=Is19 in1=w15_19 out=Is19w15_19
+.subckt and in0=Is20 in1=w15_20 out=Is20w15_20
+.subckt and in0=Is21 in1=w15_21 out=Is21w15_21
+.subckt and in0=Is22 in1=w15_22 out=Is22w15_22
+.subckt and in0=Is23 in1=w15_23 out=Is23w15_23
+.subckt and in0=Is24 in1=w15_24 out=Is24w15_24
+.subckt and in0=Is25 in1=w15_25 out=Is25w15_25
+.subckt and in0=Is26 in1=w15_26 out=Is26w15_26
+.subckt and in0=Is27 in1=w15_27 out=Is27w15_27
+.subckt and in0=Is28 in1=w15_28 out=Is28w15_28
+.subckt and in0=Is29 in1=w15_29 out=Is29w15_29
+.subckt and in0=Is30 in1=w15_30 out=Is30w15_30
+.subckt and in0=Is31 in1=w15_31 out=Is31w15_31
+.subckt and in0=Is32 in1=w15_32 out=Is32w15_32
+.subckt xor32 in0=Is1w15_1 in1=Is2w15_2 in2=Is3w15_3 in3=Is4w15_4 in4=Is5w15_5 in5=Is6w15_6 in6=Is7w15_7 in7=Is8w15_8 in8=Is9w15_9 in9=Is10w15_10 in10=Is11w15_11 in11=Is12w15_12 in12=Is13w15_13 in13=Is14w15_14 in14=Is15w15_15 in15=Is16w15_16 in16=Is17w15_17 in17=Is18w15_18 in18=Is19w15_19 in19=Is20w15_20 in20=Is21w15_21 in21=Is22w15_22 in22=Is23w15_23 in23=Is24w15_24 in24=Is25w15_25 in25=Is26w15_26 in26=Is27w15_27 in27=Is28w15_28 in28=Is29w15_29 in29=Is30w15_30 in30=Is31w15_31 in31=Is32w15_32 out=Istim15
+
+.subckt and in0=Is1 in1=w16_1 out=Is1w16_1
+.subckt and in0=Is2 in1=w16_2 out=Is2w16_2
+.subckt and in0=Is3 in1=w16_3 out=Is3w16_3
+.subckt and in0=Is4 in1=w16_4 out=Is4w16_4
+.subckt and in0=Is5 in1=w16_5 out=Is5w16_5
+.subckt and in0=Is6 in1=w16_6 out=Is6w16_6
+.subckt and in0=Is7 in1=w16_7 out=Is7w16_7
+.subckt and in0=Is8 in1=w16_8 out=Is8w16_8
+.subckt and in0=Is9 in1=w16_9 out=Is9w16_9
+.subckt and in0=Is10 in1=w16_10 out=Is10w16_10
+.subckt and in0=Is11 in1=w16_11 out=Is11w16_11
+.subckt and in0=Is12 in1=w16_12 out=Is12w16_12
+.subckt and in0=Is13 in1=w16_13 out=Is13w16_13
+.subckt and in0=Is14 in1=w16_14 out=Is14w16_14
+.subckt and in0=Is15 in1=w16_15 out=Is15w16_15
+.subckt and in0=Is16 in1=w16_16 out=Is16w16_16
+.subckt and in0=Is17 in1=w16_17 out=Is17w16_17
+.subckt and in0=Is18 in1=w16_18 out=Is18w16_18
+.subckt and in0=Is19 in1=w16_19 out=Is19w16_19
+.subckt and in0=Is20 in1=w16_20 out=Is20w16_20
+.subckt and in0=Is21 in1=w16_21 out=Is21w16_21
+.subckt and in0=Is22 in1=w16_22 out=Is22w16_22
+.subckt and in0=Is23 in1=w16_23 out=Is23w16_23
+.subckt and in0=Is24 in1=w16_24 out=Is24w16_24
+.subckt and in0=Is25 in1=w16_25 out=Is25w16_25
+.subckt and in0=Is26 in1=w16_26 out=Is26w16_26
+.subckt and in0=Is27 in1=w16_27 out=Is27w16_27
+.subckt and in0=Is28 in1=w16_28 out=Is28w16_28
+.subckt and in0=Is29 in1=w16_29 out=Is29w16_29
+.subckt and in0=Is30 in1=w16_30 out=Is30w16_30
+.subckt and in0=Is31 in1=w16_31 out=Is31w16_31
+.subckt and in0=Is32 in1=w16_32 out=Is32w16_32
+.subckt xor32 in0=Is1w16_1 in1=Is2w16_2 in2=Is3w16_3 in3=Is4w16_4 in4=Is5w16_5 in5=Is6w16_6 in6=Is7w16_7 in7=Is8w16_8 in8=Is9w16_9 in9=Is10w16_10 in10=Is11w16_11 in11=Is12w16_12 in12=Is13w16_13 in13=Is14w16_14 in14=Is15w16_15 in15=Is16w16_16 in16=Is17w16_17 in17=Is18w16_18 in18=Is19w16_19 in19=Is20w16_20 in20=Is21w16_21 in21=Is22w16_22 in22=Is23w16_23 in23=Is24w16_24 in24=Is25w16_25 in25=Is26w16_26 in26=Is27w16_27 in27=Is28w16_28 in28=Is29w16_29 in29=Is30w16_30 in30=Is31w16_31 in31=Is32w16_32 out=Istim16
+
+.subckt and in0=Is1 in1=w17_1 out=Is1w17_1
+.subckt and in0=Is2 in1=w17_2 out=Is2w17_2
+.subckt and in0=Is3 in1=w17_3 out=Is3w17_3
+.subckt and in0=Is4 in1=w17_4 out=Is4w17_4
+.subckt and in0=Is5 in1=w17_5 out=Is5w17_5
+.subckt and in0=Is6 in1=w17_6 out=Is6w17_6
+.subckt and in0=Is7 in1=w17_7 out=Is7w17_7
+.subckt and in0=Is8 in1=w17_8 out=Is8w17_8
+.subckt and in0=Is9 in1=w17_9 out=Is9w17_9
+.subckt and in0=Is10 in1=w17_10 out=Is10w17_10
+.subckt and in0=Is11 in1=w17_11 out=Is11w17_11
+.subckt and in0=Is12 in1=w17_12 out=Is12w17_12
+.subckt and in0=Is13 in1=w17_13 out=Is13w17_13
+.subckt and in0=Is14 in1=w17_14 out=Is14w17_14
+.subckt and in0=Is15 in1=w17_15 out=Is15w17_15
+.subckt and in0=Is16 in1=w17_16 out=Is16w17_16
+.subckt and in0=Is17 in1=w17_17 out=Is17w17_17
+.subckt and in0=Is18 in1=w17_18 out=Is18w17_18
+.subckt and in0=Is19 in1=w17_19 out=Is19w17_19
+.subckt and in0=Is20 in1=w17_20 out=Is20w17_20
+.subckt and in0=Is21 in1=w17_21 out=Is21w17_21
+.subckt and in0=Is22 in1=w17_22 out=Is22w17_22
+.subckt and in0=Is23 in1=w17_23 out=Is23w17_23
+.subckt and in0=Is24 in1=w17_24 out=Is24w17_24
+.subckt and in0=Is25 in1=w17_25 out=Is25w17_25
+.subckt and in0=Is26 in1=w17_26 out=Is26w17_26
+.subckt and in0=Is27 in1=w17_27 out=Is27w17_27
+.subckt and in0=Is28 in1=w17_28 out=Is28w17_28
+.subckt and in0=Is29 in1=w17_29 out=Is29w17_29
+.subckt and in0=Is30 in1=w17_30 out=Is30w17_30
+.subckt and in0=Is31 in1=w17_31 out=Is31w17_31
+.subckt and in0=Is32 in1=w17_32 out=Is32w17_32
+.subckt xor32 in0=Is1w17_1 in1=Is2w17_2 in2=Is3w17_3 in3=Is4w17_4 in4=Is5w17_5 in5=Is6w17_6 in6=Is7w17_7 in7=Is8w17_8 in8=Is9w17_9 in9=Is10w17_10 in10=Is11w17_11 in11=Is12w17_12 in12=Is13w17_13 in13=Is14w17_14 in14=Is15w17_15 in15=Is16w17_16 in16=Is17w17_17 in17=Is18w17_18 in18=Is19w17_19 in19=Is20w17_20 in20=Is21w17_21 in21=Is22w17_22 in22=Is23w17_23 in23=Is24w17_24 in24=Is25w17_25 in25=Is26w17_26 in26=Is27w17_27 in27=Is28w17_28 in28=Is29w17_29 in29=Is30w17_30 in30=Is31w17_31 in31=Is32w17_32 out=Istim17
+
+.subckt and in0=Is1 in1=w18_1 out=Is1w18_1
+.subckt and in0=Is2 in1=w18_2 out=Is2w18_2
+.subckt and in0=Is3 in1=w18_3 out=Is3w18_3
+.subckt and in0=Is4 in1=w18_4 out=Is4w18_4
+.subckt and in0=Is5 in1=w18_5 out=Is5w18_5
+.subckt and in0=Is6 in1=w18_6 out=Is6w18_6
+.subckt and in0=Is7 in1=w18_7 out=Is7w18_7
+.subckt and in0=Is8 in1=w18_8 out=Is8w18_8
+.subckt and in0=Is9 in1=w18_9 out=Is9w18_9
+.subckt and in0=Is10 in1=w18_10 out=Is10w18_10
+.subckt and in0=Is11 in1=w18_11 out=Is11w18_11
+.subckt and in0=Is12 in1=w18_12 out=Is12w18_12
+.subckt and in0=Is13 in1=w18_13 out=Is13w18_13
+.subckt and in0=Is14 in1=w18_14 out=Is14w18_14
+.subckt and in0=Is15 in1=w18_15 out=Is15w18_15
+.subckt and in0=Is16 in1=w18_16 out=Is16w18_16
+.subckt and in0=Is17 in1=w18_17 out=Is17w18_17
+.subckt and in0=Is18 in1=w18_18 out=Is18w18_18
+.subckt and in0=Is19 in1=w18_19 out=Is19w18_19
+.subckt and in0=Is20 in1=w18_20 out=Is20w18_20
+.subckt and in0=Is21 in1=w18_21 out=Is21w18_21
+.subckt and in0=Is22 in1=w18_22 out=Is22w18_22
+.subckt and in0=Is23 in1=w18_23 out=Is23w18_23
+.subckt and in0=Is24 in1=w18_24 out=Is24w18_24
+.subckt and in0=Is25 in1=w18_25 out=Is25w18_25
+.subckt and in0=Is26 in1=w18_26 out=Is26w18_26
+.subckt and in0=Is27 in1=w18_27 out=Is27w18_27
+.subckt and in0=Is28 in1=w18_28 out=Is28w18_28
+.subckt and in0=Is29 in1=w18_29 out=Is29w18_29
+.subckt and in0=Is30 in1=w18_30 out=Is30w18_30
+.subckt and in0=Is31 in1=w18_31 out=Is31w18_31
+.subckt and in0=Is32 in1=w18_32 out=Is32w18_32
+.subckt xor32 in0=Is1w18_1 in1=Is2w18_2 in2=Is3w18_3 in3=Is4w18_4 in4=Is5w18_5 in5=Is6w18_6 in6=Is7w18_7 in7=Is8w18_8 in8=Is9w18_9 in9=Is10w18_10 in10=Is11w18_11 in11=Is12w18_12 in12=Is13w18_13 in13=Is14w18_14 in14=Is15w18_15 in15=Is16w18_16 in16=Is17w18_17 in17=Is18w18_18 in18=Is19w18_19 in19=Is20w18_20 in20=Is21w18_21 in21=Is22w18_22 in22=Is23w18_23 in23=Is24w18_24 in24=Is25w18_25 in25=Is26w18_26 in26=Is27w18_27 in27=Is28w18_28 in28=Is29w18_29 in29=Is30w18_30 in30=Is31w18_31 in31=Is32w18_32 out=Istim18
+
+.subckt and in0=Is1 in1=w19_1 out=Is1w19_1
+.subckt and in0=Is2 in1=w19_2 out=Is2w19_2
+.subckt and in0=Is3 in1=w19_3 out=Is3w19_3
+.subckt and in0=Is4 in1=w19_4 out=Is4w19_4
+.subckt and in0=Is5 in1=w19_5 out=Is5w19_5
+.subckt and in0=Is6 in1=w19_6 out=Is6w19_6
+.subckt and in0=Is7 in1=w19_7 out=Is7w19_7
+.subckt and in0=Is8 in1=w19_8 out=Is8w19_8
+.subckt and in0=Is9 in1=w19_9 out=Is9w19_9
+.subckt and in0=Is10 in1=w19_10 out=Is10w19_10
+.subckt and in0=Is11 in1=w19_11 out=Is11w19_11
+.subckt and in0=Is12 in1=w19_12 out=Is12w19_12
+.subckt and in0=Is13 in1=w19_13 out=Is13w19_13
+.subckt and in0=Is14 in1=w19_14 out=Is14w19_14
+.subckt and in0=Is15 in1=w19_15 out=Is15w19_15
+.subckt and in0=Is16 in1=w19_16 out=Is16w19_16
+.subckt and in0=Is17 in1=w19_17 out=Is17w19_17
+.subckt and in0=Is18 in1=w19_18 out=Is18w19_18
+.subckt and in0=Is19 in1=w19_19 out=Is19w19_19
+.subckt and in0=Is20 in1=w19_20 out=Is20w19_20
+.subckt and in0=Is21 in1=w19_21 out=Is21w19_21
+.subckt and in0=Is22 in1=w19_22 out=Is22w19_22
+.subckt and in0=Is23 in1=w19_23 out=Is23w19_23
+.subckt and in0=Is24 in1=w19_24 out=Is24w19_24
+.subckt and in0=Is25 in1=w19_25 out=Is25w19_25
+.subckt and in0=Is26 in1=w19_26 out=Is26w19_26
+.subckt and in0=Is27 in1=w19_27 out=Is27w19_27
+.subckt and in0=Is28 in1=w19_28 out=Is28w19_28
+.subckt and in0=Is29 in1=w19_29 out=Is29w19_29
+.subckt and in0=Is30 in1=w19_30 out=Is30w19_30
+.subckt and in0=Is31 in1=w19_31 out=Is31w19_31
+.subckt and in0=Is32 in1=w19_32 out=Is32w19_32
+.subckt xor32 in0=Is1w19_1 in1=Is2w19_2 in2=Is3w19_3 in3=Is4w19_4 in4=Is5w19_5 in5=Is6w19_6 in6=Is7w19_7 in7=Is8w19_8 in8=Is9w19_9 in9=Is10w19_10 in10=Is11w19_11 in11=Is12w19_12 in12=Is13w19_13 in13=Is14w19_14 in14=Is15w19_15 in15=Is16w19_16 in16=Is17w19_17 in17=Is18w19_18 in18=Is19w19_19 in19=Is20w19_20 in20=Is21w19_21 in21=Is22w19_22 in22=Is23w19_23 in23=Is24w19_24 in24=Is25w19_25 in25=Is26w19_26 in26=Is27w19_27 in27=Is28w19_28 in28=Is29w19_29 in29=Is30w19_30 in30=Is31w19_31 in31=Is32w19_32 out=Istim19
+
+.subckt and in0=Is1 in1=w20_1 out=Is1w20_1
+.subckt and in0=Is2 in1=w20_2 out=Is2w20_2
+.subckt and in0=Is3 in1=w20_3 out=Is3w20_3
+.subckt and in0=Is4 in1=w20_4 out=Is4w20_4
+.subckt and in0=Is5 in1=w20_5 out=Is5w20_5
+.subckt and in0=Is6 in1=w20_6 out=Is6w20_6
+.subckt and in0=Is7 in1=w20_7 out=Is7w20_7
+.subckt and in0=Is8 in1=w20_8 out=Is8w20_8
+.subckt and in0=Is9 in1=w20_9 out=Is9w20_9
+.subckt and in0=Is10 in1=w20_10 out=Is10w20_10
+.subckt and in0=Is11 in1=w20_11 out=Is11w20_11
+.subckt and in0=Is12 in1=w20_12 out=Is12w20_12
+.subckt and in0=Is13 in1=w20_13 out=Is13w20_13
+.subckt and in0=Is14 in1=w20_14 out=Is14w20_14
+.subckt and in0=Is15 in1=w20_15 out=Is15w20_15
+.subckt and in0=Is16 in1=w20_16 out=Is16w20_16
+.subckt and in0=Is17 in1=w20_17 out=Is17w20_17
+.subckt and in0=Is18 in1=w20_18 out=Is18w20_18
+.subckt and in0=Is19 in1=w20_19 out=Is19w20_19
+.subckt and in0=Is20 in1=w20_20 out=Is20w20_20
+.subckt and in0=Is21 in1=w20_21 out=Is21w20_21
+.subckt and in0=Is22 in1=w20_22 out=Is22w20_22
+.subckt and in0=Is23 in1=w20_23 out=Is23w20_23
+.subckt and in0=Is24 in1=w20_24 out=Is24w20_24
+.subckt and in0=Is25 in1=w20_25 out=Is25w20_25
+.subckt and in0=Is26 in1=w20_26 out=Is26w20_26
+.subckt and in0=Is27 in1=w20_27 out=Is27w20_27
+.subckt and in0=Is28 in1=w20_28 out=Is28w20_28
+.subckt and in0=Is29 in1=w20_29 out=Is29w20_29
+.subckt and in0=Is30 in1=w20_30 out=Is30w20_30
+.subckt and in0=Is31 in1=w20_31 out=Is31w20_31
+.subckt and in0=Is32 in1=w20_32 out=Is32w20_32
+.subckt xor32 in0=Is1w20_1 in1=Is2w20_2 in2=Is3w20_3 in3=Is4w20_4 in4=Is5w20_5 in5=Is6w20_6 in6=Is7w20_7 in7=Is8w20_8 in8=Is9w20_9 in9=Is10w20_10 in10=Is11w20_11 in11=Is12w20_12 in12=Is13w20_13 in13=Is14w20_14 in14=Is15w20_15 in15=Is16w20_16 in16=Is17w20_17 in17=Is18w20_18 in18=Is19w20_19 in19=Is20w20_20 in20=Is21w20_21 in21=Is22w20_22 in22=Is23w20_23 in23=Is24w20_24 in24=Is25w20_25 in25=Is26w20_26 in26=Is27w20_27 in27=Is28w20_28 in28=Is29w20_29 in29=Is30w20_30 in30=Is31w20_31 in31=Is32w20_32 out=Istim20
+
+.subckt and in0=Is1 in1=w21_1 out=Is1w21_1
+.subckt and in0=Is2 in1=w21_2 out=Is2w21_2
+.subckt and in0=Is3 in1=w21_3 out=Is3w21_3
+.subckt and in0=Is4 in1=w21_4 out=Is4w21_4
+.subckt and in0=Is5 in1=w21_5 out=Is5w21_5
+.subckt and in0=Is6 in1=w21_6 out=Is6w21_6
+.subckt and in0=Is7 in1=w21_7 out=Is7w21_7
+.subckt and in0=Is8 in1=w21_8 out=Is8w21_8
+.subckt and in0=Is9 in1=w21_9 out=Is9w21_9
+.subckt and in0=Is10 in1=w21_10 out=Is10w21_10
+.subckt and in0=Is11 in1=w21_11 out=Is11w21_11
+.subckt and in0=Is12 in1=w21_12 out=Is12w21_12
+.subckt and in0=Is13 in1=w21_13 out=Is13w21_13
+.subckt and in0=Is14 in1=w21_14 out=Is14w21_14
+.subckt and in0=Is15 in1=w21_15 out=Is15w21_15
+.subckt and in0=Is16 in1=w21_16 out=Is16w21_16
+.subckt and in0=Is17 in1=w21_17 out=Is17w21_17
+.subckt and in0=Is18 in1=w21_18 out=Is18w21_18
+.subckt and in0=Is19 in1=w21_19 out=Is19w21_19
+.subckt and in0=Is20 in1=w21_20 out=Is20w21_20
+.subckt and in0=Is21 in1=w21_21 out=Is21w21_21
+.subckt and in0=Is22 in1=w21_22 out=Is22w21_22
+.subckt and in0=Is23 in1=w21_23 out=Is23w21_23
+.subckt and in0=Is24 in1=w21_24 out=Is24w21_24
+.subckt and in0=Is25 in1=w21_25 out=Is25w21_25
+.subckt and in0=Is26 in1=w21_26 out=Is26w21_26
+.subckt and in0=Is27 in1=w21_27 out=Is27w21_27
+.subckt and in0=Is28 in1=w21_28 out=Is28w21_28
+.subckt and in0=Is29 in1=w21_29 out=Is29w21_29
+.subckt and in0=Is30 in1=w21_30 out=Is30w21_30
+.subckt and in0=Is31 in1=w21_31 out=Is31w21_31
+.subckt and in0=Is32 in1=w21_32 out=Is32w21_32
+.subckt xor32 in0=Is1w21_1 in1=Is2w21_2 in2=Is3w21_3 in3=Is4w21_4 in4=Is5w21_5 in5=Is6w21_6 in6=Is7w21_7 in7=Is8w21_8 in8=Is9w21_9 in9=Is10w21_10 in10=Is11w21_11 in11=Is12w21_12 in12=Is13w21_13 in13=Is14w21_14 in14=Is15w21_15 in15=Is16w21_16 in16=Is17w21_17 in17=Is18w21_18 in18=Is19w21_19 in19=Is20w21_20 in20=Is21w21_21 in21=Is22w21_22 in22=Is23w21_23 in23=Is24w21_24 in24=Is25w21_25 in25=Is26w21_26 in26=Is27w21_27 in27=Is28w21_28 in28=Is29w21_29 in29=Is30w21_30 in30=Is31w21_31 in31=Is32w21_32 out=Istim21
+
+.subckt and in0=Is1 in1=w22_1 out=Is1w22_1
+.subckt and in0=Is2 in1=w22_2 out=Is2w22_2
+.subckt and in0=Is3 in1=w22_3 out=Is3w22_3
+.subckt and in0=Is4 in1=w22_4 out=Is4w22_4
+.subckt and in0=Is5 in1=w22_5 out=Is5w22_5
+.subckt and in0=Is6 in1=w22_6 out=Is6w22_6
+.subckt and in0=Is7 in1=w22_7 out=Is7w22_7
+.subckt and in0=Is8 in1=w22_8 out=Is8w22_8
+.subckt and in0=Is9 in1=w22_9 out=Is9w22_9
+.subckt and in0=Is10 in1=w22_10 out=Is10w22_10
+.subckt and in0=Is11 in1=w22_11 out=Is11w22_11
+.subckt and in0=Is12 in1=w22_12 out=Is12w22_12
+.subckt and in0=Is13 in1=w22_13 out=Is13w22_13
+.subckt and in0=Is14 in1=w22_14 out=Is14w22_14
+.subckt and in0=Is15 in1=w22_15 out=Is15w22_15
+.subckt and in0=Is16 in1=w22_16 out=Is16w22_16
+.subckt and in0=Is17 in1=w22_17 out=Is17w22_17
+.subckt and in0=Is18 in1=w22_18 out=Is18w22_18
+.subckt and in0=Is19 in1=w22_19 out=Is19w22_19
+.subckt and in0=Is20 in1=w22_20 out=Is20w22_20
+.subckt and in0=Is21 in1=w22_21 out=Is21w22_21
+.subckt and in0=Is22 in1=w22_22 out=Is22w22_22
+.subckt and in0=Is23 in1=w22_23 out=Is23w22_23
+.subckt and in0=Is24 in1=w22_24 out=Is24w22_24
+.subckt and in0=Is25 in1=w22_25 out=Is25w22_25
+.subckt and in0=Is26 in1=w22_26 out=Is26w22_26
+.subckt and in0=Is27 in1=w22_27 out=Is27w22_27
+.subckt and in0=Is28 in1=w22_28 out=Is28w22_28
+.subckt and in0=Is29 in1=w22_29 out=Is29w22_29
+.subckt and in0=Is30 in1=w22_30 out=Is30w22_30
+.subckt and in0=Is31 in1=w22_31 out=Is31w22_31
+.subckt and in0=Is32 in1=w22_32 out=Is32w22_32
+.subckt xor32 in0=Is1w22_1 in1=Is2w22_2 in2=Is3w22_3 in3=Is4w22_4 in4=Is5w22_5 in5=Is6w22_6 in6=Is7w22_7 in7=Is8w22_8 in8=Is9w22_9 in9=Is10w22_10 in10=Is11w22_11 in11=Is12w22_12 in12=Is13w22_13 in13=Is14w22_14 in14=Is15w22_15 in15=Is16w22_16 in16=Is17w22_17 in17=Is18w22_18 in18=Is19w22_19 in19=Is20w22_20 in20=Is21w22_21 in21=Is22w22_22 in22=Is23w22_23 in23=Is24w22_24 in24=Is25w22_25 in25=Is26w22_26 in26=Is27w22_27 in27=Is28w22_28 in28=Is29w22_29 in29=Is30w22_30 in30=Is31w22_31 in31=Is32w22_32 out=Istim22
+
+.subckt and in0=Is1 in1=w23_1 out=Is1w23_1
+.subckt and in0=Is2 in1=w23_2 out=Is2w23_2
+.subckt and in0=Is3 in1=w23_3 out=Is3w23_3
+.subckt and in0=Is4 in1=w23_4 out=Is4w23_4
+.subckt and in0=Is5 in1=w23_5 out=Is5w23_5
+.subckt and in0=Is6 in1=w23_6 out=Is6w23_6
+.subckt and in0=Is7 in1=w23_7 out=Is7w23_7
+.subckt and in0=Is8 in1=w23_8 out=Is8w23_8
+.subckt and in0=Is9 in1=w23_9 out=Is9w23_9
+.subckt and in0=Is10 in1=w23_10 out=Is10w23_10
+.subckt and in0=Is11 in1=w23_11 out=Is11w23_11
+.subckt and in0=Is12 in1=w23_12 out=Is12w23_12
+.subckt and in0=Is13 in1=w23_13 out=Is13w23_13
+.subckt and in0=Is14 in1=w23_14 out=Is14w23_14
+.subckt and in0=Is15 in1=w23_15 out=Is15w23_15
+.subckt and in0=Is16 in1=w23_16 out=Is16w23_16
+.subckt and in0=Is17 in1=w23_17 out=Is17w23_17
+.subckt and in0=Is18 in1=w23_18 out=Is18w23_18
+.subckt and in0=Is19 in1=w23_19 out=Is19w23_19
+.subckt and in0=Is20 in1=w23_20 out=Is20w23_20
+.subckt and in0=Is21 in1=w23_21 out=Is21w23_21
+.subckt and in0=Is22 in1=w23_22 out=Is22w23_22
+.subckt and in0=Is23 in1=w23_23 out=Is23w23_23
+.subckt and in0=Is24 in1=w23_24 out=Is24w23_24
+.subckt and in0=Is25 in1=w23_25 out=Is25w23_25
+.subckt and in0=Is26 in1=w23_26 out=Is26w23_26
+.subckt and in0=Is27 in1=w23_27 out=Is27w23_27
+.subckt and in0=Is28 in1=w23_28 out=Is28w23_28
+.subckt and in0=Is29 in1=w23_29 out=Is29w23_29
+.subckt and in0=Is30 in1=w23_30 out=Is30w23_30
+.subckt and in0=Is31 in1=w23_31 out=Is31w23_31
+.subckt and in0=Is32 in1=w23_32 out=Is32w23_32
+.subckt xor32 in0=Is1w23_1 in1=Is2w23_2 in2=Is3w23_3 in3=Is4w23_4 in4=Is5w23_5 in5=Is6w23_6 in6=Is7w23_7 in7=Is8w23_8 in8=Is9w23_9 in9=Is10w23_10 in10=Is11w23_11 in11=Is12w23_12 in12=Is13w23_13 in13=Is14w23_14 in14=Is15w23_15 in15=Is16w23_16 in16=Is17w23_17 in17=Is18w23_18 in18=Is19w23_19 in19=Is20w23_20 in20=Is21w23_21 in21=Is22w23_22 in22=Is23w23_23 in23=Is24w23_24 in24=Is25w23_25 in25=Is26w23_26 in26=Is27w23_27 in27=Is28w23_28 in28=Is29w23_29 in29=Is30w23_30 in30=Is31w23_31 in31=Is32w23_32 out=Istim23
+
+.subckt and in0=Is1 in1=w24_1 out=Is1w24_1
+.subckt and in0=Is2 in1=w24_2 out=Is2w24_2
+.subckt and in0=Is3 in1=w24_3 out=Is3w24_3
+.subckt and in0=Is4 in1=w24_4 out=Is4w24_4
+.subckt and in0=Is5 in1=w24_5 out=Is5w24_5
+.subckt and in0=Is6 in1=w24_6 out=Is6w24_6
+.subckt and in0=Is7 in1=w24_7 out=Is7w24_7
+.subckt and in0=Is8 in1=w24_8 out=Is8w24_8
+.subckt and in0=Is9 in1=w24_9 out=Is9w24_9
+.subckt and in0=Is10 in1=w24_10 out=Is10w24_10
+.subckt and in0=Is11 in1=w24_11 out=Is11w24_11
+.subckt and in0=Is12 in1=w24_12 out=Is12w24_12
+.subckt and in0=Is13 in1=w24_13 out=Is13w24_13
+.subckt and in0=Is14 in1=w24_14 out=Is14w24_14
+.subckt and in0=Is15 in1=w24_15 out=Is15w24_15
+.subckt and in0=Is16 in1=w24_16 out=Is16w24_16
+.subckt and in0=Is17 in1=w24_17 out=Is17w24_17
+.subckt and in0=Is18 in1=w24_18 out=Is18w24_18
+.subckt and in0=Is19 in1=w24_19 out=Is19w24_19
+.subckt and in0=Is20 in1=w24_20 out=Is20w24_20
+.subckt and in0=Is21 in1=w24_21 out=Is21w24_21
+.subckt and in0=Is22 in1=w24_22 out=Is22w24_22
+.subckt and in0=Is23 in1=w24_23 out=Is23w24_23
+.subckt and in0=Is24 in1=w24_24 out=Is24w24_24
+.subckt and in0=Is25 in1=w24_25 out=Is25w24_25
+.subckt and in0=Is26 in1=w24_26 out=Is26w24_26
+.subckt and in0=Is27 in1=w24_27 out=Is27w24_27
+.subckt and in0=Is28 in1=w24_28 out=Is28w24_28
+.subckt and in0=Is29 in1=w24_29 out=Is29w24_29
+.subckt and in0=Is30 in1=w24_30 out=Is30w24_30
+.subckt and in0=Is31 in1=w24_31 out=Is31w24_31
+.subckt and in0=Is32 in1=w24_32 out=Is32w24_32
+.subckt xor32 in0=Is1w24_1 in1=Is2w24_2 in2=Is3w24_3 in3=Is4w24_4 in4=Is5w24_5 in5=Is6w24_6 in6=Is7w24_7 in7=Is8w24_8 in8=Is9w24_9 in9=Is10w24_10 in10=Is11w24_11 in11=Is12w24_12 in12=Is13w24_13 in13=Is14w24_14 in14=Is15w24_15 in15=Is16w24_16 in16=Is17w24_17 in17=Is18w24_18 in18=Is19w24_19 in19=Is20w24_20 in20=Is21w24_21 in21=Is22w24_22 in22=Is23w24_23 in23=Is24w24_24 in24=Is25w24_25 in25=Is26w24_26 in26=Is27w24_27 in27=Is28w24_28 in28=Is29w24_29 in29=Is30w24_30 in30=Is31w24_31 in31=Is32w24_32 out=Istim24
+
+.subckt and in0=Is1 in1=w25_1 out=Is1w25_1
+.subckt and in0=Is2 in1=w25_2 out=Is2w25_2
+.subckt and in0=Is3 in1=w25_3 out=Is3w25_3
+.subckt and in0=Is4 in1=w25_4 out=Is4w25_4
+.subckt and in0=Is5 in1=w25_5 out=Is5w25_5
+.subckt and in0=Is6 in1=w25_6 out=Is6w25_6
+.subckt and in0=Is7 in1=w25_7 out=Is7w25_7
+.subckt and in0=Is8 in1=w25_8 out=Is8w25_8
+.subckt and in0=Is9 in1=w25_9 out=Is9w25_9
+.subckt and in0=Is10 in1=w25_10 out=Is10w25_10
+.subckt and in0=Is11 in1=w25_11 out=Is11w25_11
+.subckt and in0=Is12 in1=w25_12 out=Is12w25_12
+.subckt and in0=Is13 in1=w25_13 out=Is13w25_13
+.subckt and in0=Is14 in1=w25_14 out=Is14w25_14
+.subckt and in0=Is15 in1=w25_15 out=Is15w25_15
+.subckt and in0=Is16 in1=w25_16 out=Is16w25_16
+.subckt and in0=Is17 in1=w25_17 out=Is17w25_17
+.subckt and in0=Is18 in1=w25_18 out=Is18w25_18
+.subckt and in0=Is19 in1=w25_19 out=Is19w25_19
+.subckt and in0=Is20 in1=w25_20 out=Is20w25_20
+.subckt and in0=Is21 in1=w25_21 out=Is21w25_21
+.subckt and in0=Is22 in1=w25_22 out=Is22w25_22
+.subckt and in0=Is23 in1=w25_23 out=Is23w25_23
+.subckt and in0=Is24 in1=w25_24 out=Is24w25_24
+.subckt and in0=Is25 in1=w25_25 out=Is25w25_25
+.subckt and in0=Is26 in1=w25_26 out=Is26w25_26
+.subckt and in0=Is27 in1=w25_27 out=Is27w25_27
+.subckt and in0=Is28 in1=w25_28 out=Is28w25_28
+.subckt and in0=Is29 in1=w25_29 out=Is29w25_29
+.subckt and in0=Is30 in1=w25_30 out=Is30w25_30
+.subckt and in0=Is31 in1=w25_31 out=Is31w25_31
+.subckt and in0=Is32 in1=w25_32 out=Is32w25_32
+.subckt xor32 in0=Is1w25_1 in1=Is2w25_2 in2=Is3w25_3 in3=Is4w25_4 in4=Is5w25_5 in5=Is6w25_6 in6=Is7w25_7 in7=Is8w25_8 in8=Is9w25_9 in9=Is10w25_10 in10=Is11w25_11 in11=Is12w25_12 in12=Is13w25_13 in13=Is14w25_14 in14=Is15w25_15 in15=Is16w25_16 in16=Is17w25_17 in17=Is18w25_18 in18=Is19w25_19 in19=Is20w25_20 in20=Is21w25_21 in21=Is22w25_22 in22=Is23w25_23 in23=Is24w25_24 in24=Is25w25_25 in25=Is26w25_26 in26=Is27w25_27 in27=Is28w25_28 in28=Is29w25_29 in29=Is30w25_30 in30=Is31w25_31 in31=Is32w25_32 out=Istim25
+
+.subckt and in0=Is1 in1=w26_1 out=Is1w26_1
+.subckt and in0=Is2 in1=w26_2 out=Is2w26_2
+.subckt and in0=Is3 in1=w26_3 out=Is3w26_3
+.subckt and in0=Is4 in1=w26_4 out=Is4w26_4
+.subckt and in0=Is5 in1=w26_5 out=Is5w26_5
+.subckt and in0=Is6 in1=w26_6 out=Is6w26_6
+.subckt and in0=Is7 in1=w26_7 out=Is7w26_7
+.subckt and in0=Is8 in1=w26_8 out=Is8w26_8
+.subckt and in0=Is9 in1=w26_9 out=Is9w26_9
+.subckt and in0=Is10 in1=w26_10 out=Is10w26_10
+.subckt and in0=Is11 in1=w26_11 out=Is11w26_11
+.subckt and in0=Is12 in1=w26_12 out=Is12w26_12
+.subckt and in0=Is13 in1=w26_13 out=Is13w26_13
+.subckt and in0=Is14 in1=w26_14 out=Is14w26_14
+.subckt and in0=Is15 in1=w26_15 out=Is15w26_15
+.subckt and in0=Is16 in1=w26_16 out=Is16w26_16
+.subckt and in0=Is17 in1=w26_17 out=Is17w26_17
+.subckt and in0=Is18 in1=w26_18 out=Is18w26_18
+.subckt and in0=Is19 in1=w26_19 out=Is19w26_19
+.subckt and in0=Is20 in1=w26_20 out=Is20w26_20
+.subckt and in0=Is21 in1=w26_21 out=Is21w26_21
+.subckt and in0=Is22 in1=w26_22 out=Is22w26_22
+.subckt and in0=Is23 in1=w26_23 out=Is23w26_23
+.subckt and in0=Is24 in1=w26_24 out=Is24w26_24
+.subckt and in0=Is25 in1=w26_25 out=Is25w26_25
+.subckt and in0=Is26 in1=w26_26 out=Is26w26_26
+.subckt and in0=Is27 in1=w26_27 out=Is27w26_27
+.subckt and in0=Is28 in1=w26_28 out=Is28w26_28
+.subckt and in0=Is29 in1=w26_29 out=Is29w26_29
+.subckt and in0=Is30 in1=w26_30 out=Is30w26_30
+.subckt and in0=Is31 in1=w26_31 out=Is31w26_31
+.subckt and in0=Is32 in1=w26_32 out=Is32w26_32
+.subckt xor32 in0=Is1w26_1 in1=Is2w26_2 in2=Is3w26_3 in3=Is4w26_4 in4=Is5w26_5 in5=Is6w26_6 in6=Is7w26_7 in7=Is8w26_8 in8=Is9w26_9 in9=Is10w26_10 in10=Is11w26_11 in11=Is12w26_12 in12=Is13w26_13 in13=Is14w26_14 in14=Is15w26_15 in15=Is16w26_16 in16=Is17w26_17 in17=Is18w26_18 in18=Is19w26_19 in19=Is20w26_20 in20=Is21w26_21 in21=Is22w26_22 in22=Is23w26_23 in23=Is24w26_24 in24=Is25w26_25 in25=Is26w26_26 in26=Is27w26_27 in27=Is28w26_28 in28=Is29w26_29 in29=Is30w26_30 in30=Is31w26_31 in31=Is32w26_32 out=Istim26
+
+.subckt and in0=Is1 in1=w27_1 out=Is1w27_1
+.subckt and in0=Is2 in1=w27_2 out=Is2w27_2
+.subckt and in0=Is3 in1=w27_3 out=Is3w27_3
+.subckt and in0=Is4 in1=w27_4 out=Is4w27_4
+.subckt and in0=Is5 in1=w27_5 out=Is5w27_5
+.subckt and in0=Is6 in1=w27_6 out=Is6w27_6
+.subckt and in0=Is7 in1=w27_7 out=Is7w27_7
+.subckt and in0=Is8 in1=w27_8 out=Is8w27_8
+.subckt and in0=Is9 in1=w27_9 out=Is9w27_9
+.subckt and in0=Is10 in1=w27_10 out=Is10w27_10
+.subckt and in0=Is11 in1=w27_11 out=Is11w27_11
+.subckt and in0=Is12 in1=w27_12 out=Is12w27_12
+.subckt and in0=Is13 in1=w27_13 out=Is13w27_13
+.subckt and in0=Is14 in1=w27_14 out=Is14w27_14
+.subckt and in0=Is15 in1=w27_15 out=Is15w27_15
+.subckt and in0=Is16 in1=w27_16 out=Is16w27_16
+.subckt and in0=Is17 in1=w27_17 out=Is17w27_17
+.subckt and in0=Is18 in1=w27_18 out=Is18w27_18
+.subckt and in0=Is19 in1=w27_19 out=Is19w27_19
+.subckt and in0=Is20 in1=w27_20 out=Is20w27_20
+.subckt and in0=Is21 in1=w27_21 out=Is21w27_21
+.subckt and in0=Is22 in1=w27_22 out=Is22w27_22
+.subckt and in0=Is23 in1=w27_23 out=Is23w27_23
+.subckt and in0=Is24 in1=w27_24 out=Is24w27_24
+.subckt and in0=Is25 in1=w27_25 out=Is25w27_25
+.subckt and in0=Is26 in1=w27_26 out=Is26w27_26
+.subckt and in0=Is27 in1=w27_27 out=Is27w27_27
+.subckt and in0=Is28 in1=w27_28 out=Is28w27_28
+.subckt and in0=Is29 in1=w27_29 out=Is29w27_29
+.subckt and in0=Is30 in1=w27_30 out=Is30w27_30
+.subckt and in0=Is31 in1=w27_31 out=Is31w27_31
+.subckt and in0=Is32 in1=w27_32 out=Is32w27_32
+.subckt xor32 in0=Is1w27_1 in1=Is2w27_2 in2=Is3w27_3 in3=Is4w27_4 in4=Is5w27_5 in5=Is6w27_6 in6=Is7w27_7 in7=Is8w27_8 in8=Is9w27_9 in9=Is10w27_10 in10=Is11w27_11 in11=Is12w27_12 in12=Is13w27_13 in13=Is14w27_14 in14=Is15w27_15 in15=Is16w27_16 in16=Is17w27_17 in17=Is18w27_18 in18=Is19w27_19 in19=Is20w27_20 in20=Is21w27_21 in21=Is22w27_22 in22=Is23w27_23 in23=Is24w27_24 in24=Is25w27_25 in25=Is26w27_26 in26=Is27w27_27 in27=Is28w27_28 in28=Is29w27_29 in29=Is30w27_30 in30=Is31w27_31 in31=Is32w27_32 out=Istim27
+
+.subckt and in0=Is1 in1=w28_1 out=Is1w28_1
+.subckt and in0=Is2 in1=w28_2 out=Is2w28_2
+.subckt and in0=Is3 in1=w28_3 out=Is3w28_3
+.subckt and in0=Is4 in1=w28_4 out=Is4w28_4
+.subckt and in0=Is5 in1=w28_5 out=Is5w28_5
+.subckt and in0=Is6 in1=w28_6 out=Is6w28_6
+.subckt and in0=Is7 in1=w28_7 out=Is7w28_7
+.subckt and in0=Is8 in1=w28_8 out=Is8w28_8
+.subckt and in0=Is9 in1=w28_9 out=Is9w28_9
+.subckt and in0=Is10 in1=w28_10 out=Is10w28_10
+.subckt and in0=Is11 in1=w28_11 out=Is11w28_11
+.subckt and in0=Is12 in1=w28_12 out=Is12w28_12
+.subckt and in0=Is13 in1=w28_13 out=Is13w28_13
+.subckt and in0=Is14 in1=w28_14 out=Is14w28_14
+.subckt and in0=Is15 in1=w28_15 out=Is15w28_15
+.subckt and in0=Is16 in1=w28_16 out=Is16w28_16
+.subckt and in0=Is17 in1=w28_17 out=Is17w28_17
+.subckt and in0=Is18 in1=w28_18 out=Is18w28_18
+.subckt and in0=Is19 in1=w28_19 out=Is19w28_19
+.subckt and in0=Is20 in1=w28_20 out=Is20w28_20
+.subckt and in0=Is21 in1=w28_21 out=Is21w28_21
+.subckt and in0=Is22 in1=w28_22 out=Is22w28_22
+.subckt and in0=Is23 in1=w28_23 out=Is23w28_23
+.subckt and in0=Is24 in1=w28_24 out=Is24w28_24
+.subckt and in0=Is25 in1=w28_25 out=Is25w28_25
+.subckt and in0=Is26 in1=w28_26 out=Is26w28_26
+.subckt and in0=Is27 in1=w28_27 out=Is27w28_27
+.subckt and in0=Is28 in1=w28_28 out=Is28w28_28
+.subckt and in0=Is29 in1=w28_29 out=Is29w28_29
+.subckt and in0=Is30 in1=w28_30 out=Is30w28_30
+.subckt and in0=Is31 in1=w28_31 out=Is31w28_31
+.subckt and in0=Is32 in1=w28_32 out=Is32w28_32
+.subckt xor32 in0=Is1w28_1 in1=Is2w28_2 in2=Is3w28_3 in3=Is4w28_4 in4=Is5w28_5 in5=Is6w28_6 in6=Is7w28_7 in7=Is8w28_8 in8=Is9w28_9 in9=Is10w28_10 in10=Is11w28_11 in11=Is12w28_12 in12=Is13w28_13 in13=Is14w28_14 in14=Is15w28_15 in15=Is16w28_16 in16=Is17w28_17 in17=Is18w28_18 in18=Is19w28_19 in19=Is20w28_20 in20=Is21w28_21 in21=Is22w28_22 in22=Is23w28_23 in23=Is24w28_24 in24=Is25w28_25 in25=Is26w28_26 in26=Is27w28_27 in27=Is28w28_28 in28=Is29w28_29 in29=Is30w28_30 in30=Is31w28_31 in31=Is32w28_32 out=Istim28
+
+.subckt and in0=Is1 in1=w29_1 out=Is1w29_1
+.subckt and in0=Is2 in1=w29_2 out=Is2w29_2
+.subckt and in0=Is3 in1=w29_3 out=Is3w29_3
+.subckt and in0=Is4 in1=w29_4 out=Is4w29_4
+.subckt and in0=Is5 in1=w29_5 out=Is5w29_5
+.subckt and in0=Is6 in1=w29_6 out=Is6w29_6
+.subckt and in0=Is7 in1=w29_7 out=Is7w29_7
+.subckt and in0=Is8 in1=w29_8 out=Is8w29_8
+.subckt and in0=Is9 in1=w29_9 out=Is9w29_9
+.subckt and in0=Is10 in1=w29_10 out=Is10w29_10
+.subckt and in0=Is11 in1=w29_11 out=Is11w29_11
+.subckt and in0=Is12 in1=w29_12 out=Is12w29_12
+.subckt and in0=Is13 in1=w29_13 out=Is13w29_13
+.subckt and in0=Is14 in1=w29_14 out=Is14w29_14
+.subckt and in0=Is15 in1=w29_15 out=Is15w29_15
+.subckt and in0=Is16 in1=w29_16 out=Is16w29_16
+.subckt and in0=Is17 in1=w29_17 out=Is17w29_17
+.subckt and in0=Is18 in1=w29_18 out=Is18w29_18
+.subckt and in0=Is19 in1=w29_19 out=Is19w29_19
+.subckt and in0=Is20 in1=w29_20 out=Is20w29_20
+.subckt and in0=Is21 in1=w29_21 out=Is21w29_21
+.subckt and in0=Is22 in1=w29_22 out=Is22w29_22
+.subckt and in0=Is23 in1=w29_23 out=Is23w29_23
+.subckt and in0=Is24 in1=w29_24 out=Is24w29_24
+.subckt and in0=Is25 in1=w29_25 out=Is25w29_25
+.subckt and in0=Is26 in1=w29_26 out=Is26w29_26
+.subckt and in0=Is27 in1=w29_27 out=Is27w29_27
+.subckt and in0=Is28 in1=w29_28 out=Is28w29_28
+.subckt and in0=Is29 in1=w29_29 out=Is29w29_29
+.subckt and in0=Is30 in1=w29_30 out=Is30w29_30
+.subckt and in0=Is31 in1=w29_31 out=Is31w29_31
+.subckt and in0=Is32 in1=w29_32 out=Is32w29_32
+.subckt xor32 in0=Is1w29_1 in1=Is2w29_2 in2=Is3w29_3 in3=Is4w29_4 in4=Is5w29_5 in5=Is6w29_6 in6=Is7w29_7 in7=Is8w29_8 in8=Is9w29_9 in9=Is10w29_10 in10=Is11w29_11 in11=Is12w29_12 in12=Is13w29_13 in13=Is14w29_14 in14=Is15w29_15 in15=Is16w29_16 in16=Is17w29_17 in17=Is18w29_18 in18=Is19w29_19 in19=Is20w29_20 in20=Is21w29_21 in21=Is22w29_22 in22=Is23w29_23 in23=Is24w29_24 in24=Is25w29_25 in25=Is26w29_26 in26=Is27w29_27 in27=Is28w29_28 in28=Is29w29_29 in29=Is30w29_30 in30=Is31w29_31 in31=Is32w29_32 out=Istim29
+
+.subckt and in0=Is1 in1=w30_1 out=Is1w30_1
+.subckt and in0=Is2 in1=w30_2 out=Is2w30_2
+.subckt and in0=Is3 in1=w30_3 out=Is3w30_3
+.subckt and in0=Is4 in1=w30_4 out=Is4w30_4
+.subckt and in0=Is5 in1=w30_5 out=Is5w30_5
+.subckt and in0=Is6 in1=w30_6 out=Is6w30_6
+.subckt and in0=Is7 in1=w30_7 out=Is7w30_7
+.subckt and in0=Is8 in1=w30_8 out=Is8w30_8
+.subckt and in0=Is9 in1=w30_9 out=Is9w30_9
+.subckt and in0=Is10 in1=w30_10 out=Is10w30_10
+.subckt and in0=Is11 in1=w30_11 out=Is11w30_11
+.subckt and in0=Is12 in1=w30_12 out=Is12w30_12
+.subckt and in0=Is13 in1=w30_13 out=Is13w30_13
+.subckt and in0=Is14 in1=w30_14 out=Is14w30_14
+.subckt and in0=Is15 in1=w30_15 out=Is15w30_15
+.subckt and in0=Is16 in1=w30_16 out=Is16w30_16
+.subckt and in0=Is17 in1=w30_17 out=Is17w30_17
+.subckt and in0=Is18 in1=w30_18 out=Is18w30_18
+.subckt and in0=Is19 in1=w30_19 out=Is19w30_19
+.subckt and in0=Is20 in1=w30_20 out=Is20w30_20
+.subckt and in0=Is21 in1=w30_21 out=Is21w30_21
+.subckt and in0=Is22 in1=w30_22 out=Is22w30_22
+.subckt and in0=Is23 in1=w30_23 out=Is23w30_23
+.subckt and in0=Is24 in1=w30_24 out=Is24w30_24
+.subckt and in0=Is25 in1=w30_25 out=Is25w30_25
+.subckt and in0=Is26 in1=w30_26 out=Is26w30_26
+.subckt and in0=Is27 in1=w30_27 out=Is27w30_27
+.subckt and in0=Is28 in1=w30_28 out=Is28w30_28
+.subckt and in0=Is29 in1=w30_29 out=Is29w30_29
+.subckt and in0=Is30 in1=w30_30 out=Is30w30_30
+.subckt and in0=Is31 in1=w30_31 out=Is31w30_31
+.subckt and in0=Is32 in1=w30_32 out=Is32w30_32
+.subckt xor32 in0=Is1w30_1 in1=Is2w30_2 in2=Is3w30_3 in3=Is4w30_4 in4=Is5w30_5 in5=Is6w30_6 in6=Is7w30_7 in7=Is8w30_8 in8=Is9w30_9 in9=Is10w30_10 in10=Is11w30_11 in11=Is12w30_12 in12=Is13w30_13 in13=Is14w30_14 in14=Is15w30_15 in15=Is16w30_16 in16=Is17w30_17 in17=Is18w30_18 in18=Is19w30_19 in19=Is20w30_20 in20=Is21w30_21 in21=Is22w30_22 in22=Is23w30_23 in23=Is24w30_24 in24=Is25w30_25 in25=Is26w30_26 in26=Is27w30_27 in27=Is28w30_28 in28=Is29w30_29 in29=Is30w30_30 in30=Is31w30_31 in31=Is32w30_32 out=Istim30
+
+.subckt and in0=Is1 in1=w31_1 out=Is1w31_1
+.subckt and in0=Is2 in1=w31_2 out=Is2w31_2
+.subckt and in0=Is3 in1=w31_3 out=Is3w31_3
+.subckt and in0=Is4 in1=w31_4 out=Is4w31_4
+.subckt and in0=Is5 in1=w31_5 out=Is5w31_5
+.subckt and in0=Is6 in1=w31_6 out=Is6w31_6
+.subckt and in0=Is7 in1=w31_7 out=Is7w31_7
+.subckt and in0=Is8 in1=w31_8 out=Is8w31_8
+.subckt and in0=Is9 in1=w31_9 out=Is9w31_9
+.subckt and in0=Is10 in1=w31_10 out=Is10w31_10
+.subckt and in0=Is11 in1=w31_11 out=Is11w31_11
+.subckt and in0=Is12 in1=w31_12 out=Is12w31_12
+.subckt and in0=Is13 in1=w31_13 out=Is13w31_13
+.subckt and in0=Is14 in1=w31_14 out=Is14w31_14
+.subckt and in0=Is15 in1=w31_15 out=Is15w31_15
+.subckt and in0=Is16 in1=w31_16 out=Is16w31_16
+.subckt and in0=Is17 in1=w31_17 out=Is17w31_17
+.subckt and in0=Is18 in1=w31_18 out=Is18w31_18
+.subckt and in0=Is19 in1=w31_19 out=Is19w31_19
+.subckt and in0=Is20 in1=w31_20 out=Is20w31_20
+.subckt and in0=Is21 in1=w31_21 out=Is21w31_21
+.subckt and in0=Is22 in1=w31_22 out=Is22w31_22
+.subckt and in0=Is23 in1=w31_23 out=Is23w31_23
+.subckt and in0=Is24 in1=w31_24 out=Is24w31_24
+.subckt and in0=Is25 in1=w31_25 out=Is25w31_25
+.subckt and in0=Is26 in1=w31_26 out=Is26w31_26
+.subckt and in0=Is27 in1=w31_27 out=Is27w31_27
+.subckt and in0=Is28 in1=w31_28 out=Is28w31_28
+.subckt and in0=Is29 in1=w31_29 out=Is29w31_29
+.subckt and in0=Is30 in1=w31_30 out=Is30w31_30
+.subckt and in0=Is31 in1=w31_31 out=Is31w31_31
+.subckt and in0=Is32 in1=w31_32 out=Is32w31_32
+.subckt xor32 in0=Is1w31_1 in1=Is2w31_2 in2=Is3w31_3 in3=Is4w31_4 in4=Is5w31_5 in5=Is6w31_6 in6=Is7w31_7 in7=Is8w31_8 in8=Is9w31_9 in9=Is10w31_10 in10=Is11w31_11 in11=Is12w31_12 in12=Is13w31_13 in13=Is14w31_14 in14=Is15w31_15 in15=Is16w31_16 in16=Is17w31_17 in17=Is18w31_18 in18=Is19w31_19 in19=Is20w31_20 in20=Is21w31_21 in21=Is22w31_22 in22=Is23w31_23 in23=Is24w31_24 in24=Is25w31_25 in25=Is26w31_26 in26=Is27w31_27 in27=Is28w31_28 in28=Is29w31_29 in29=Is30w31_30 in30=Is31w31_31 in31=Is32w31_32 out=Istim31
+
+.subckt and in0=Is1 in1=w32_1 out=Is1w32_1
+.subckt and in0=Is2 in1=w32_2 out=Is2w32_2
+.subckt and in0=Is3 in1=w32_3 out=Is3w32_3
+.subckt and in0=Is4 in1=w32_4 out=Is4w32_4
+.subckt and in0=Is5 in1=w32_5 out=Is5w32_5
+.subckt and in0=Is6 in1=w32_6 out=Is6w32_6
+.subckt and in0=Is7 in1=w32_7 out=Is7w32_7
+.subckt and in0=Is8 in1=w32_8 out=Is8w32_8
+.subckt and in0=Is9 in1=w32_9 out=Is9w32_9
+.subckt and in0=Is10 in1=w32_10 out=Is10w32_10
+.subckt and in0=Is11 in1=w32_11 out=Is11w32_11
+.subckt and in0=Is12 in1=w32_12 out=Is12w32_12
+.subckt and in0=Is13 in1=w32_13 out=Is13w32_13
+.subckt and in0=Is14 in1=w32_14 out=Is14w32_14
+.subckt and in0=Is15 in1=w32_15 out=Is15w32_15
+.subckt and in0=Is16 in1=w32_16 out=Is16w32_16
+.subckt and in0=Is17 in1=w32_17 out=Is17w32_17
+.subckt and in0=Is18 in1=w32_18 out=Is18w32_18
+.subckt and in0=Is19 in1=w32_19 out=Is19w32_19
+.subckt and in0=Is20 in1=w32_20 out=Is20w32_20
+.subckt and in0=Is21 in1=w32_21 out=Is21w32_21
+.subckt and in0=Is22 in1=w32_22 out=Is22w32_22
+.subckt and in0=Is23 in1=w32_23 out=Is23w32_23
+.subckt and in0=Is24 in1=w32_24 out=Is24w32_24
+.subckt and in0=Is25 in1=w32_25 out=Is25w32_25
+.subckt and in0=Is26 in1=w32_26 out=Is26w32_26
+.subckt and in0=Is27 in1=w32_27 out=Is27w32_27
+.subckt and in0=Is28 in1=w32_28 out=Is28w32_28
+.subckt and in0=Is29 in1=w32_29 out=Is29w32_29
+.subckt and in0=Is30 in1=w32_30 out=Is30w32_30
+.subckt and in0=Is31 in1=w32_31 out=Is31w32_31
+.subckt and in0=Is32 in1=w32_32 out=Is32w32_32
+.subckt xor32 in0=Is1w32_1 in1=Is2w32_2 in2=Is3w32_3 in3=Is4w32_4 in4=Is5w32_5 in5=Is6w32_6 in6=Is7w32_7 in7=Is8w32_8 in8=Is9w32_9 in9=Is10w32_10 in10=Is11w32_11 in11=Is12w32_12 in12=Is13w32_13 in13=Is14w32_14 in14=Is15w32_15 in15=Is16w32_16 in16=Is17w32_17 in17=Is18w32_18 in18=Is19w32_19 in19=Is20w32_20 in20=Is21w32_21 in21=Is22w32_22 in22=Is23w32_23 in23=Is24w32_24 in24=Is25w32_25 in25=Is26w32_26 in26=Is27w32_27 in27=Is28w32_28 in28=Is29w32_29 in29=Is30w32_30 in30=Is31w32_31 in31=Is32w32_32 out=Istim32
+.end
+
+.model and
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+11 1
+.end
+
+.model xor32
+.inputs in0 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 in12 in13 in14 in15 in16 in17 in18 in19 in20 in21 in22 in23 in24 in25 in26 in27 in28 in29 in30 in31
+.outputs out
+.subckt xor16 in0=in0 in1=in1 in2=in2 in3=in3 in4=in4 in5=in5 in6=in6 in7=in7 in8=in8 in9=in9 in10=in10 in11=in11 in12=in12 in13=in13 in14=in14 in15=in15 out=o1
+.subckt xor16 in0=in16 in1=in17 in2=in18 in3=in19 in4=in20 in5=in21 in6=in22 in7=in23 in8=in24 in9=in25 in10=in26 in11=in27 in12=in28 in13=in29 in14=in30 in15=in31 out=o2
+.subckt xor2 in0=o1 in1=o2 out=out
+.end
+
+.model xor16
+.inputs in0 in1 in2 in3 in4 in5 in6 in7 in8 in9 in10 in11 in12 in13 in14 in15
+.outputs out
+.subckt xor8 in0=in0 in1=in1 in2=in2 in3=in3 in4=in4 in5=in5 in6=in6 in7=in7 out=o1
+.subckt xor8 in0=in8 in1=in9 in2=in10 in3=in11 in4=in12 in5=in13 in6=in14 in7=in15 out=o2
+.subckt xor2 in0=o1 in1=o2 out=out
+.end
+
+.model xor8
+.inputs in0 in1 in2 in3 in4 in5 in6 in7
+.outputs out
+.subckt xor4 in0=in0 in1=in1 in2=in2 in3=in3 out=o1
+.subckt xor4 in0=in4 in1=in5 in2=in6 in3=in7 out=o2
+.subckt xor2 in0=o1 in1=o2 out=out
+.end
+
+.model xor4
+.inputs in0 in1 in2 in3
+.outputs out
+.subckt xor2 in0=in0 in1=in1 out=o1
+.subckt xor2 in0=in2 in1=in3 out=o2
+.subckt xor2 in0=o1 in1=o2 out=out
+.end
+
+.model xor2
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+10 1
+01 1
+.end
