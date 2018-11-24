@@ -1,109 +1,93 @@
 #.top matrix8
 .model matrix8
-.inputs Is1
-.inputs Is5
-.inputs w11 w21 w31 w41
-.inputs w51 w61 w71 w81
-.inputs w15 w25 w35 w45
-.inputs w55 w65 w75 w85
-.inputs Is2
-.inputs Is6
-.inputs w22 w32 w42 w12
-.inputs w62 w72 w82 w52
-.inputs w26 w36 w46 w16
-.inputs w66 w76 w86 w56
-.inputs Is3
-.inputs Is7
-.inputs w33 w43 w13 w23
-.inputs w73 w83 w53 w63
-.inputs w37 w47 w17 w27
-.inputs w77 w87 w57 w67
-.inputs Is4
-.inputs Is8
-.inputs w44 w14 w24 w34
-.inputs w84 w54 w64 w74
-.inputs w48 w18 w28 w38
-.inputs w88 w58 w68 w78
+.inputs Is1 Is5
+.inputs w1_1 w1_4 w1_3 w1_2 w1_5 w1_8 w1_7 w1_6 w5_1 w5_4 w5_3 w5_2 w5_5 w5_8 w5_7 w5_6
+.inputs Is2 Is6
+.inputs w2_2 w2_1 w2_4 w2_3 w2_6 w2_5 w2_8 w2_7 w6_2 w6_1 w6_4 w6_3 w6_6 w6_5 w6_8 w6_7
+.inputs Is3 Is7
+.inputs w3_3 w3_2 w3_1 w3_4 w3_7 w3_6 w3_5 w3_8 w7_3 w7_2 w7_1 w7_4 w7_7 w7_6 w7_5 w7_8
+.inputs Is4 Is8
+.inputs w4_4 w4_3 w4_2 w4_1 w4_8 w4_7 w4_6 w4_5 w8_4 w8_3 w8_2 w8_1 w8_8 w8_7 w8_6 w8_5
 .outputs Istim1 Istim2 Istim3 Istim4 Istim5 Istim6 Istim7 Istim8
 
-.subckt and in0=Is1 in1=w11 out=Is1w11
-.subckt and in0=Is2 in1=w12 out=Is2w12
-.subckt and in0=Is3 in1=w13 out=Is3w13
-.subckt and in0=Is4 in1=w14 out=Is4w14
-.subckt and in0=Is5 in1=w15 out=Is5w15
-.subckt and in0=Is6 in1=w16 out=Is6w16
-.subckt and in0=Is7 in1=w17 out=Is7w17
-.subckt and in0=Is8 in1=w18 out=Is8w18
+.subckt and in0=Is1 in1=w1_1 out=Is1w11
+.subckt and in0=Is2 in1=w1_2 out=Is2w12
+.subckt and in0=Is3 in1=w1_3 out=Is3w13
+.subckt and in0=Is4 in1=w1_4 out=Is4w14
+.subckt and in0=Is5 in1=w1_5 out=Is5w15
+.subckt and in0=Is6 in1=w1_6 out=Is6w16
+.subckt and in0=Is7 in1=w1_7 out=Is7w17
+.subckt and in0=Is8 in1=w1_8 out=Is8w18
 .subckt xor8 in0=Is1w11 in1=Is2w12 in2=Is3w13 in3=Is4w14 in4=Is5w15 in5=Is6w16 in6=Is7w17 in7=Is8w18 out=Istim1
 
-.subckt and in0=Is1 in1=w21 out=Is1w21
-.subckt and in0=Is2 in1=w22 out=Is2w22
-.subckt and in0=Is3 in1=w23 out=Is3w23
-.subckt and in0=Is4 in1=w24 out=Is4w24
-.subckt and in0=Is5 in1=w25 out=Is5w25
-.subckt and in0=Is6 in1=w26 out=Is6w26
-.subckt and in0=Is7 in1=w27 out=Is7w27
-.subckt and in0=Is8 in1=w28 out=Is8w28
+.subckt and in0=Is1 in1=w2_1 out=Is1w21
+.subckt and in0=Is2 in1=w2_2 out=Is2w22
+.subckt and in0=Is3 in1=w2_3 out=Is3w23
+.subckt and in0=Is4 in1=w2_4 out=Is4w24
+.subckt and in0=Is5 in1=w2_5 out=Is5w25
+.subckt and in0=Is6 in1=w2_6 out=Is6w26
+.subckt and in0=Is7 in1=w2_7 out=Is7w27
+.subckt and in0=Is8 in1=w2_8 out=Is8w28
 .subckt xor8 in0=Is1w21 in1=Is2w22 in2=Is3w23 in3=Is4w24 in4=Is5w25 in5=Is6w26 in6=Is7w27 in7=Is8w28 out=Istim2
 
-.subckt and in0=Is1 in1=w31 out=Is1w31
-.subckt and in0=Is2 in1=w32 out=Is2w32
-.subckt and in0=Is3 in1=w33 out=Is3w33
-.subckt and in0=Is4 in1=w34 out=Is4w34
-.subckt and in0=Is5 in1=w35 out=Is5w35
-.subckt and in0=Is6 in1=w36 out=Is6w36
-.subckt and in0=Is7 in1=w37 out=Is7w37
-.subckt and in0=Is8 in1=w38 out=Is8w38
+.subckt and in0=Is1 in1=w3_1 out=Is1w31
+.subckt and in0=Is2 in1=w3_2 out=Is2w32
+.subckt and in0=Is3 in1=w3_3 out=Is3w33
+.subckt and in0=Is4 in1=w3_4 out=Is4w34
+.subckt and in0=Is5 in1=w3_5 out=Is5w35
+.subckt and in0=Is6 in1=w3_6 out=Is6w36
+.subckt and in0=Is7 in1=w3_7 out=Is7w37
+.subckt and in0=Is8 in1=w3_8 out=Is8w38
 .subckt xor8 in0=Is1w31 in1=Is2w32 in2=Is3w33 in3=Is4w34 in4=Is5w35 in5=Is6w36 in6=Is7w37 in7=Is8w38 out=Istim3
 
-.subckt and in0=Is1 in1=w41 out=Is1w41
-.subckt and in0=Is2 in1=w42 out=Is2w42
-.subckt and in0=Is3 in1=w43 out=Is3w43
-.subckt and in0=Is4 in1=w44 out=Is4w44
-.subckt and in0=Is5 in1=w45 out=Is5w45
-.subckt and in0=Is6 in1=w46 out=Is6w46
-.subckt and in0=Is7 in1=w47 out=Is7w47
-.subckt and in0=Is8 in1=w48 out=Is8w48
+.subckt and in0=Is1 in1=w4_1 out=Is1w41
+.subckt and in0=Is2 in1=w4_2 out=Is2w42
+.subckt and in0=Is3 in1=w4_3 out=Is3w43
+.subckt and in0=Is4 in1=w4_4 out=Is4w44
+.subckt and in0=Is5 in1=w4_5 out=Is5w45
+.subckt and in0=Is6 in1=w4_6 out=Is6w46
+.subckt and in0=Is7 in1=w4_7 out=Is7w47
+.subckt and in0=Is8 in1=w4_8 out=Is8w48
 .subckt xor8 in0=Is1w41 in1=Is2w42 in2=Is3w43 in3=Is4w44 in4=Is5w45 in5=Is6w46 in6=Is7w47 in7=Is8w48 out=Istim4
 
-.subckt and in0=Is1 in1=w51 out=Is1w51
-.subckt and in0=Is2 in1=w52 out=Is2w52
-.subckt and in0=Is3 in1=w53 out=Is3w53
-.subckt and in0=Is4 in1=w54 out=Is4w54
-.subckt and in0=Is5 in1=w55 out=Is5w55
-.subckt and in0=Is6 in1=w56 out=Is6w56
-.subckt and in0=Is7 in1=w57 out=Is7w57
-.subckt and in0=Is8 in1=w58 out=Is8w58
+.subckt and in0=Is1 in1=w5_1 out=Is1w51
+.subckt and in0=Is2 in1=w5_2 out=Is2w52
+.subckt and in0=Is3 in1=w5_3 out=Is3w53
+.subckt and in0=Is4 in1=w5_4 out=Is4w54
+.subckt and in0=Is5 in1=w5_5 out=Is5w55
+.subckt and in0=Is6 in1=w5_6 out=Is6w56
+.subckt and in0=Is7 in1=w5_7 out=Is7w57
+.subckt and in0=Is8 in1=w5_8 out=Is8w58
 .subckt xor8 in0=Is1w51 in1=Is2w52 in2=Is3w53 in3=Is4w54 in4=Is5w55 in5=Is6w56 in6=Is7w57 in7=Is8w58 out=Istim5
 
-.subckt and in0=Is1 in1=w61 out=Is1w61
-.subckt and in0=Is2 in1=w62 out=Is2w62
-.subckt and in0=Is3 in1=w63 out=Is3w63
-.subckt and in0=Is4 in1=w64 out=Is4w64
-.subckt and in0=Is5 in1=w65 out=Is5w65
-.subckt and in0=Is6 in1=w66 out=Is6w66
-.subckt and in0=Is7 in1=w67 out=Is7w67
-.subckt and in0=Is8 in1=w68 out=Is8w68
+.subckt and in0=Is1 in1=w6_1 out=Is1w61
+.subckt and in0=Is2 in1=w6_2 out=Is2w62
+.subckt and in0=Is3 in1=w6_3 out=Is3w63
+.subckt and in0=Is4 in1=w6_4 out=Is4w64
+.subckt and in0=Is5 in1=w6_5 out=Is5w65
+.subckt and in0=Is6 in1=w6_6 out=Is6w66
+.subckt and in0=Is7 in1=w6_7 out=Is7w67
+.subckt and in0=Is8 in1=w6_8 out=Is8w68
 .subckt xor8 in0=Is1w61 in1=Is2w62 in2=Is3w63 in3=Is4w64 in4=Is5w65 in5=Is6w66 in6=Is7w67 in7=Is8w68 out=Istim6
 
-.subckt and in0=Is1 in1=w71 out=Is1w71
-.subckt and in0=Is2 in1=w72 out=Is2w72
-.subckt and in0=Is3 in1=w73 out=Is3w73
-.subckt and in0=Is4 in1=w74 out=Is4w74
-.subckt and in0=Is5 in1=w75 out=Is5w75
-.subckt and in0=Is6 in1=w76 out=Is6w76
-.subckt and in0=Is7 in1=w77 out=Is7w77
-.subckt and in0=Is8 in1=w78 out=Is8w78
+.subckt and in0=Is1 in1=w7_1 out=Is1w71
+.subckt and in0=Is2 in1=w7_2 out=Is2w72
+.subckt and in0=Is3 in1=w7_3 out=Is3w73
+.subckt and in0=Is4 in1=w7_4 out=Is4w74
+.subckt and in0=Is5 in1=w7_5 out=Is5w75
+.subckt and in0=Is6 in1=w7_6 out=Is6w76
+.subckt and in0=Is7 in1=w7_7 out=Is7w77
+.subckt and in0=Is8 in1=w7_8 out=Is8w78
 .subckt xor8 in0=Is1w71 in1=Is2w72 in2=Is3w73 in3=Is4w74 in4=Is5w75 in5=Is6w76 in6=Is7w77 in7=Is8w78 out=Istim7
 
-.subckt and in0=Is1 in1=w81 out=Is1w81
-.subckt and in0=Is2 in1=w82 out=Is2w82
-.subckt and in0=Is3 in1=w83 out=Is3w83
-.subckt and in0=Is4 in1=w84 out=Is4w84
-.subckt and in0=Is5 in1=w85 out=Is5w85
-.subckt and in0=Is6 in1=w86 out=Is6w86
-.subckt and in0=Is7 in1=w87 out=Is7w87
-.subckt and in0=Is8 in1=w88 out=Is8w88
+.subckt and in0=Is1 in1=w8_1 out=Is1w81
+.subckt and in0=Is2 in1=w8_2 out=Is2w82
+.subckt and in0=Is3 in1=w8_3 out=Is3w83
+.subckt and in0=Is4 in1=w8_4 out=Is4w84
+.subckt and in0=Is5 in1=w8_5 out=Is5w85
+.subckt and in0=Is6 in1=w8_6 out=Is6w86
+.subckt and in0=Is7 in1=w8_7 out=Is7w87
+.subckt and in0=Is8 in1=w8_8 out=Is8w88
 .subckt xor8 in0=Is1w81 in1=Is2w82 in2=Is3w83 in3=Is4w84 in4=Is5w85 in5=Is6w86 in6=Is7w87 in7=Is8w88 out=Istim8
 .end
 

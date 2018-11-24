@@ -683,7 +683,8 @@ void block_data::set_connection() {
 	for(int k = 0; k < block_connection[b1][b2]; k++) {
 	  if(use_lut_out && k == 0) {
 	    circuit_data += ".names";
-	    circuit_data += " " + lut_out_cbl[c][b1][k];
+	    circuit_data += " " + reg_cbr[c][b1][1];
+	    //	    circuit_data += " " + lut_out_cbl[c][b1][k];
 	    circuit_data += " " + con_cb1b2k[c][b1][b2][k];
 	    circuit_data += "\n";
 	    circuit_data += "1 1\n";
@@ -714,9 +715,11 @@ void block_data::set_connection() {
 		}
 	      }
 	    }
+	    /*
 	    for(auto lut_out: lut_out_cbl[c][b1]) {
 	      circuit_data += " " + lut_out;
 	    }
+	    */
 	    circuit_data += " " + x_con_cb1b2k[c][b1][b2][k];
 	    circuit_data += "\n";
 

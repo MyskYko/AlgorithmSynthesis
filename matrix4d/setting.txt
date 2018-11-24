@@ -19,6 +19,7 @@ option5
 2,3,4
 option6
 1
+// lutout is nomore candidate.
 option7
 1
 option8

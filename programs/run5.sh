@@ -3,4 +3,5 @@ for i in {1..5}; do
     ../bin/gen spec.blif data.txt out$i setting.txt > log$i
 done
 
-./print_result.sh | awk '{m += $1} END{print m/NR}'
+command=`dirname $0`'/print_result.sh'
+$command | awk '{m += $1} END{print m/NR}'

@@ -2,10 +2,10 @@
 .model matrix4
 .inputs Is1
 .inputs Is3
-.inputs w11 w21 w31 w41 w13 w23 w33 w43
+.inputs w11 w12 w13 w14 w31 w32 w33 w34
 .inputs Is2
 .inputs Is4
-.inputs w12 w22 w32 w42 w14 w24 w34 w44
+.inputs w21 w22 w23 w24 w41 w42 w43 w44
 .outputs Istim1 Istim2 Istim3 Istim4
 
 .subckt and in0=Is1 in1=w11 out=Is1w11
