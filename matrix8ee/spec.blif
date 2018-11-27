@@ -1,0 +1,139 @@
+#.top matrix8
+.model matrix8
+.inputs Is1
+.inputs Is5
+.inputs w11 w12 w13 w14
+.inputs w15 w16 w17 w18
+.inputs w51 w52 w53 w54
+.inputs w55 w56 w57 w58
+.inputs Is2
+.inputs Is6
+.inputs w21 w22 w23 w24
+.inputs w25 w26 w27 w28
+.inputs w61 w62 w63 w64
+.inputs w65 w66 w67 w68
+.inputs Is3
+.inputs Is7
+.inputs w31 w32 w33 w34
+.inputs w35 w36 w37 w38
+.inputs w71 w72 w73 w74
+.inputs w75 w76 w77 w78
+.inputs Is4
+.inputs Is8
+.inputs w41 w42 w43 w44
+.inputs w45 w46 w47 w48
+.inputs w81 w82 w83 w84
+.inputs w85 w86 w87 w88
+.outputs Istim1 Istim2 Istim3 Istim4 Istim5 Istim6 Istim7 Istim8
+
+.subckt and in0=Is1 in1=w11 out=Is1w11
+.subckt and in0=Is2 in1=w12 out=Is2w12
+.subckt and in0=Is3 in1=w13 out=Is3w13
+.subckt and in0=Is4 in1=w14 out=Is4w14
+.subckt and in0=Is5 in1=w15 out=Is5w15
+.subckt and in0=Is6 in1=w16 out=Is6w16
+.subckt and in0=Is7 in1=w17 out=Is7w17
+.subckt and in0=Is8 in1=w18 out=Is8w18
+.subckt xor8 in0=Is1w11 in1=Is2w12 in2=Is3w13 in3=Is4w14 in4=Is5w15 in5=Is6w16 in6=Is7w17 in7=Is8w18 out=Istim1
+
+.subckt and in0=Is1 in1=w21 out=Is1w21
+.subckt and in0=Is2 in1=w22 out=Is2w22
+.subckt and in0=Is3 in1=w23 out=Is3w23
+.subckt and in0=Is4 in1=w24 out=Is4w24
+.subckt and in0=Is5 in1=w25 out=Is5w25
+.subckt and in0=Is6 in1=w26 out=Is6w26
+.subckt and in0=Is7 in1=w27 out=Is7w27
+.subckt and in0=Is8 in1=w28 out=Is8w28
+.subckt xor8 in0=Is1w21 in1=Is2w22 in2=Is3w23 in3=Is4w24 in4=Is5w25 in5=Is6w26 in6=Is7w27 in7=Is8w28 out=Istim2
+
+.subckt and in0=Is1 in1=w31 out=Is1w31
+.subckt and in0=Is2 in1=w32 out=Is2w32
+.subckt and in0=Is3 in1=w33 out=Is3w33
+.subckt and in0=Is4 in1=w34 out=Is4w34
+.subckt and in0=Is5 in1=w35 out=Is5w35
+.subckt and in0=Is6 in1=w36 out=Is6w36
+.subckt and in0=Is7 in1=w37 out=Is7w37
+.subckt and in0=Is8 in1=w38 out=Is8w38
+.subckt xor8 in0=Is1w31 in1=Is2w32 in2=Is3w33 in3=Is4w34 in4=Is5w35 in5=Is6w36 in6=Is7w37 in7=Is8w38 out=Istim3
+
+.subckt and in0=Is1 in1=w41 out=Is1w41
+.subckt and in0=Is2 in1=w42 out=Is2w42
+.subckt and in0=Is3 in1=w43 out=Is3w43
+.subckt and in0=Is4 in1=w44 out=Is4w44
+.subckt and in0=Is5 in1=w45 out=Is5w45
+.subckt and in0=Is6 in1=w46 out=Is6w46
+.subckt and in0=Is7 in1=w47 out=Is7w47
+.subckt and in0=Is8 in1=w48 out=Is8w48
+.subckt xor8 in0=Is1w41 in1=Is2w42 in2=Is3w43 in3=Is4w44 in4=Is5w45 in5=Is6w46 in6=Is7w47 in7=Is8w48 out=Istim4
+
+.subckt and in0=Is1 in1=w51 out=Is1w51
+.subckt and in0=Is2 in1=w52 out=Is2w52
+.subckt and in0=Is3 in1=w53 out=Is3w53
+.subckt and in0=Is4 in1=w54 out=Is4w54
+.subckt and in0=Is5 in1=w55 out=Is5w55
+.subckt and in0=Is6 in1=w56 out=Is6w56
+.subckt and in0=Is7 in1=w57 out=Is7w57
+.subckt and in0=Is8 in1=w58 out=Is8w58
+.subckt xor8 in0=Is1w51 in1=Is2w52 in2=Is3w53 in3=Is4w54 in4=Is5w55 in5=Is6w56 in6=Is7w57 in7=Is8w58 out=Istim5
+
+.subckt and in0=Is1 in1=w61 out=Is1w61
+.subckt and in0=Is2 in1=w62 out=Is2w62
+.subckt and in0=Is3 in1=w63 out=Is3w63
+.subckt and in0=Is4 in1=w64 out=Is4w64
+.subckt and in0=Is5 in1=w65 out=Is5w65
+.subckt and in0=Is6 in1=w66 out=Is6w66
+.subckt and in0=Is7 in1=w67 out=Is7w67
+.subckt and in0=Is8 in1=w68 out=Is8w68
+.subckt xor8 in0=Is1w61 in1=Is2w62 in2=Is3w63 in3=Is4w64 in4=Is5w65 in5=Is6w66 in6=Is7w67 in7=Is8w68 out=Istim6
+
+.subckt and in0=Is1 in1=w71 out=Is1w71
+.subckt and in0=Is2 in1=w72 out=Is2w72
+.subckt and in0=Is3 in1=w73 out=Is3w73
+.subckt and in0=Is4 in1=w74 out=Is4w74
+.subckt and in0=Is5 in1=w75 out=Is5w75
+.subckt and in0=Is6 in1=w76 out=Is6w76
+.subckt and in0=Is7 in1=w77 out=Is7w77
+.subckt and in0=Is8 in1=w78 out=Is8w78
+.subckt xor8 in0=Is1w71 in1=Is2w72 in2=Is3w73 in3=Is4w74 in4=Is5w75 in5=Is6w76 in6=Is7w77 in7=Is8w78 out=Istim7
+
+.subckt and in0=Is1 in1=w81 out=Is1w81
+.subckt and in0=Is2 in1=w82 out=Is2w82
+.subckt and in0=Is3 in1=w83 out=Is3w83
+.subckt and in0=Is4 in1=w84 out=Is4w84
+.subckt and in0=Is5 in1=w85 out=Is5w85
+.subckt and in0=Is6 in1=w86 out=Is6w86
+.subckt and in0=Is7 in1=w87 out=Is7w87
+.subckt and in0=Is8 in1=w88 out=Is8w88
+.subckt xor8 in0=Is1w81 in1=Is2w82 in2=Is3w83 in3=Is4w84 in4=Is5w85 in5=Is6w86 in6=Is7w87 in7=Is8w88 out=Istim8
+.end
+
+.model and
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+11 1
+.end
+
+.model xor8
+.inputs in0 in1 in2 in3 in4 in5 in6 in7
+.outputs out
+.subckt xor4 in0=in0 in1=in1 in2=in2 in3=in3 out=o1
+.subckt xor4 in0=in4 in1=in5 in2=in6 in3=in7 out=o2
+.subckt xor in0=o1 in1=o2 out=out
+.end
+
+.model xor4
+.inputs in0 in1 in2 in3
+.outputs out
+.subckt xor in0=in0 in1=in1 out=in0_in1
+.subckt xor in0=in0_in1 in1=in2 out=in0_in1_in2
+.subckt xor in0=in0_in1_in2 in1=in3 out=out
+.end
+
+.model xor
+.inputs in0 in1
+.outputs out
+.names in0 in1 out
+10 1
+01 1
+.end

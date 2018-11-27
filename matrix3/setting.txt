@@ -5,7 +5,7 @@ number_of_candidates_of_primary_outputs
 way_to_share_operation
 3,0
 number_of_operands
--,3
+-,2
 option1
 0
 option2

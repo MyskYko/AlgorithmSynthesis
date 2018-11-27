@@ -8,7 +8,7 @@ number_of_operands
 -,3
 //ignored
 option1
-0
+1
 option2
 1
 option3

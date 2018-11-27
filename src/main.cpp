@@ -18,7 +18,7 @@ int min_each_block_reg_count = -1;
 int max_each_block_reg_count = 0;
 int min_each_block_output_count = -1;
 int additional_each_block_output_count = 0;
-int min_luttype_matrix_type = 0;
+int min_luttype_matrix_type = 3;
 int additional_luttype_matrix_type = 0;
 int min_lut_input = -1;
 int max_lut_input = 0;
@@ -28,7 +28,7 @@ bool devide_inputs = 0;
 bool group_inputs = 0;
 bool symmetric = 0;
 std::map<int, int> repetition;
-bool use_lut_out = 0;
+int fix_con = 0;
 bool fix_outputs = 0;
 std::vector<int> lut_function;
 bool limit_reg = 0;
@@ -237,7 +237,7 @@ void read_setting_file(char* filename) {
       symmetric = std::stoi(str);
     }
     else if(str == "option5") {
-      //#define REPETITION {{1,1},{2,1},{3,1}}
+      //#define REPETITION 0,1,2 -> {{1,1},{2,1},{3,1}}
       // cycle starts from 0, so it changes 1 -> 0.
       getline(file, str);
       if(str != "0") {
@@ -258,8 +258,9 @@ void read_setting_file(char* filename) {
       }
     }
     else if(str == "option6") {
+      // like "2" for second reg. This needs -1 in block.cpp.
       getline(file,str);
-      use_lut_out = std::stoi(str);
+      fix_con = std::stoi(str);
     }
     else if(str == "option7") {
       getline(file,str);
@@ -536,7 +537,7 @@ int main(int argc, char **argv) {
 	    b.set_shift_reg(shift_reg_pos);
 	    b.set_lut_function(lut_function);
 	    b.set_input_onehot(input_once);
-	    b.set_use_lut_out(use_lut_out);
+	    b.set_fix_con(fix_con);
 	    b.set_symmetric(symmetric);
 	    b.set_devide_inputs(devide_inputs);
 	    b.set_limit_reg(limit_reg);

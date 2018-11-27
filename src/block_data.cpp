@@ -127,15 +127,17 @@ void block_data::read_file(char* file_name) {
 	symmetric = true;
       }
     }
-    else if(str == "use_lut_out") {
+    /*
+      else if(str == "use_lut_out") {
       getline(file, str);
       if(str == "0") {
-	use_lut_out = false;
+      use_lut_out = false;
       }
       else {
-	use_lut_out = true;
+      use_lut_out = true;
       }
-    }
+      }
+    */
   }
 }
 
@@ -184,8 +186,8 @@ void block_data::set_repetition(std::map<int, int> x) {
   repetition = x;
 }
 
-void block_data::set_use_lut_out(bool x) {
-  use_lut_out = x;
+void block_data::set_fix_con(int x) {
+  fix_con = x;
 }
 
 void block_data::set_devide_inputs(bool x) {
@@ -284,14 +286,14 @@ void block_data::show_data() {
     std::cout << "],";
   }
   std::cout << std::endl;
-  std::cout << "use_lut_out(option6):" << use_lut_out << std::endl;
+  std::cout << "fix_con(option6):" << fix_con << std::endl;
   std::cout << "fix_outputs(option7):" << fix_outputs << std::endl;
   std::cout << "lut_function(option8):";
   for(auto x: lut_function) {
     std::cout << x << ",";
   }
   std::cout << std::endl;
-  std::cout << "limit_reg(option9): not available" << limit_reg << std::endl;
+  std::cout << "limit_reg(option9): not available" << /*limit_reg <<*/ std::endl;
   std::cout << "shift_reg(option10): not available";
   for(auto x: shift_reg) {
     std::cout << x << ",";
@@ -444,7 +446,8 @@ void block_data::set_wire() {
 	    for(int b_from = 0; b_from < block_count; b_from++) {
 	      for(int k = 0; k < block_connection[b_from][b]; k++) {
 		circuit_data += " " + con_cb1b2k[c-1][b_from][b][k];
-		b_from = block_count; // assigning 1 data is enough. let's get out of loop.
+		b_from = block_count; // It is assumed that assigning 1 data is enough. let's get out of loop. If you want to assigne more than 1 data, please set c,c for assign_reg.
+		break;
 	      }
 	    }
 	  }
@@ -480,7 +483,7 @@ void block_data::set_wire() {
     for(int b1 = 0; b1 < block_count; b1++) {
       for(int b2 = 0; b2 < block_count; b2++) {
 	for(int k = 0; k < block_connection[b1][b2]; k++) {
-	  if(!use_lut_out || k > 0) {
+	  if(!fix_con || k > 0) {
 	    circuit_data += ".names " + x_con_cb1b2k[c][b1][b2][k] + " " + con_cb1b2k[c][b1][b2][k] + "\n";
 	    circuit_data += "1 1\n";
 	  }
@@ -681,9 +684,9 @@ void block_data::set_connection() {
       int assigned_con_count_for_each_cb1 = 0;
       for(int b2 = 0; b2 < block_count; b2++) {
 	for(int k = 0; k < block_connection[b1][b2]; k++) {
-	  if(use_lut_out && k == 0) {
+	  if(fix_con > 0 && k == 0) {
 	    circuit_data += ".names";
-	    circuit_data += " " + reg_cbr[c][b1][1];
+	    circuit_data += " " + reg_cbr[c][b1][fix_con-1];
 	    //	    circuit_data += " " + lut_out_cbl[c][b1][k];
 	    circuit_data += " " + con_cb1b2k[c][b1][b2][k];
 	    circuit_data += "\n";
@@ -741,13 +744,16 @@ void block_data::set_reg() {
 	else {
 	  circuit_data += "#.candidates";
 	  if(assign_reg.size() != 0 && assign_reg[r].size() > 1) {
+	    int con_has_set = 0;
 	    for(int target : assign_reg[r]) {
 	      if(target == -1) {
+		if(con_has_set == 1) continue;
 		for(int b_from = 0; b_from < block_count; b_from++) {
 		  for(int k = 0; k < block_connection[b_from][b]; k++) {
 		    circuit_data += " " + con_cb1b2k[c-1][b_from][b][k];
 		  }
 		}
+		con_has_set = 1;
 	      }
 	      else if(target == -2) {
 		for(auto lut_out: lut_out_cbl[c-1][b]) {
@@ -848,36 +854,35 @@ void block_data::set_output() {
     }
   }
   else {
-    for(auto x_output_name: x_output_names) {
+    for(int o = 0; o < (int)x_output_names.size(); o++) {
+      std::string x_output_name = x_output_names[o];
       circuit_data += "#.candidates";
       int c = cycle_count - 1;
       for(int b = 0; b < block_count; b++) {
-	for(int o = 0; o < block_output_count[b]; o++) {
-	  int max_regtype = 0;
+	int max_regtype = 0;
+	for(int r = 0; r < block_reg_count[b]; r++) {
+	  int regtype = regtype_cbr[c][b][r];
+	  if(max_regtype < regtype) {
+	    max_regtype = regtype;
+	  }
+	}
+	
+	for(int regtype = 0; regtype <= max_regtype; regtype++) {
+	  int o_regtype = 0; // This counts that the reg is which place of that regtype in order.
+	  if(regtype != 0 && lut_function.size() != 0) o_regtype = o+1; // all lut inputs are assigned to MUX if lut function is defined by user.
+	  else if(assign_reg.size() != 0) o_regtype = o+1;
 	  for(int r = 0; r < block_reg_count[b]; r++) {
-	    int regtype = regtype_cbr[c][b][r];
-	    if(max_regtype < regtype) {
-	      max_regtype = regtype;
-	    }
-	  }
-	  
-	  for(int regtype = 0; regtype <= max_regtype; regtype++) {
-	    int o_regtype = 0; // This counts that the reg is which place of that regtype in order.
-	    if(regtype != 0 && lut_function.size() != 0) o_regtype = o+1; // all lut inputs are assigned to MUX if lut function is defined by user.
-	    else if(assign_reg.size() != 0) o_regtype = o+1;
-	    for(int r = 0; r < block_reg_count[b]; r++) {
-	      if(regtype_cbr[c][b][r] == regtype) {
-		circuit_data += " " + reg_cbr[c][b][r];
-		if(o_regtype == o) {
-		  break;
-		}
-		o_regtype++;
+	    if(regtype_cbr[c][b][r] == regtype) {
+	      circuit_data += " " + reg_cbr[c][b][r];
+	      if(o_regtype == o) {
+		break;
 	      }
+	      o_regtype++;
 	    }
 	  }
-	  for(auto lut_out: lut_out_cbl[c][b]) {
-	    circuit_data += " " + lut_out;
-	  }
+	}
+	for(auto lut_out: lut_out_cbl[c][b]) {
+	  circuit_data += " " + lut_out;
 	}
       }
       circuit_data += " " + x_output_name;      
