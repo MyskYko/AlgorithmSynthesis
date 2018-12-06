@@ -8,7 +8,7 @@
 #include <utility>
 #include <algorithm>
 
-//#define DEBUG
+#define DEBUG
 
 int main(int argc, char** argv) {
   if(argc < 3) {
@@ -435,7 +435,7 @@ int main(int argc, char** argv) {
       int c = std::stoi(str.substr(pos0+1, pos1-pos0-1));
       int b = std::stoi(str.substr(pos1+1, pos2-pos1-1));
       int r = std::stoi(str.substr(pos2+1));
-      dot_file << "reg_t" << c << "c" << b << ":" << "r" << r << "__" << output << " ;\n";
+      dot_file << "reg_t" << c << "c" << b << ":" << "r" << r  << "->" << "__" << output << " ;\n";
     }
     else if(str.substr(0,5) == "__LUT") {
       dot_file << output_value[output].substr(2) << "->" << "__" << output << " ;\n";      
