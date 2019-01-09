@@ -1,9 +1,5 @@
 number_of_register
 -,5
-number_of_candidates_of_primary_outputs
--,0
-way_to_share_operation
-3,0
 number_of_operands
 -,3
 option1

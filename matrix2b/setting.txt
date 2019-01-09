@@ -1,9 +1,5 @@
 number_of_register
--,4
-number_of_candidates_of_primary_outputs
--,0
-way_to_share_operation
-0,0
+4,4
 number_of_operands
 -,3
 //ignored
@@ -14,14 +10,11 @@ option2
 option3
 0
 option4
-0
-//1
+1
 option5
 0
-//1,2,3
 option6
 0
-//1
 option7
 1
 option8

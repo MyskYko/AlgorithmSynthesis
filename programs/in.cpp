@@ -1,6 +1,6 @@
 #include <iostream>
 
-#define N 16
+#define N 32
 #define M 4
 
 using namespace std;

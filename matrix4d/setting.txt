@@ -1,9 +1,5 @@
 number_of_register
 6,6
-number_of_candidates_of_primary_outputs
--,0
-way_to_share_operation
-0,0
 number_of_operands
 -,3
 //ignored
@@ -18,7 +14,7 @@ option4
 option5
 2,3,4
 option6
-1
+2
 // lutout is nomore candidate.
 option7
 1
@@ -31,4 +27,4 @@ option10
 option11
 -1 1 2,3,4,5 2,3,4,5 2,3,4,5 2,3,4,5
 option12
-0
+0 0 4 5 6 0
