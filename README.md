@@ -20,6 +20,6 @@ Graphing tool is "programs/dotgen". You can see and compile its code "dotgen.cpp
 Type "./dotgen out.blif out.pdf". It generates dataflow pdf in "out.pdf".
 A result for matrix2 is attached.
 
-For more details, please ask me. 
+For more details, see "readme.pdf" or please ask me. 
 
 This program will appear in paper of ISQED 2019, live demo of ISCAS 2019, Ubooth of DATE2019.
