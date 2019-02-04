@@ -15,7 +15,7 @@ void top_data:: create_onehot_signal(std::vector<std::string> copy_of_onehot_can
   for(unsigned int i = 0; i < onehot_candidate_names.size(); i++) {
     std::string candidate_name = onehot_candidate_names[i];
     if(candidate_selection_signals[candidate_name].size() == 0) {
-      std::cout << "There is no using \"" + candidate_name + "\" although it is in onehot";
+      //      std::cout << "There is no using \"" + candidate_name + "\" although it is in onehot";
       onehot_candidate_names.erase(onehot_candidate_names.begin() + i);
       i--;
     }
