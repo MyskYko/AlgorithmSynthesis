@@ -133,7 +133,7 @@ int synthesize(spec_data* spec, std::string impl_file_name, char* out_file_name,
   impl.show_simple();
   std::string log_file_name = "__log"+ std::to_string(run_count) + ".txt";
   //  std::string logfile = "__log_" + std::string(argv[3]) + ".txt";
-  std::string command = "abc -c \"read " + tmp_file_name + "; strash; qbf -v -P " + std::to_string(top.copy_of_selection_signals().size()) + ";\" > " + log_file_name;
+  std::string command = "stdbuf -o0 abc -c \"read " + tmp_file_name + "; strash; qbf -v -P " + std::to_string(top.copy_of_selection_signals().size()) + ";\" > " + log_file_name;
   system(command.c_str());
 
   // get result

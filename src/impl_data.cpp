@@ -304,7 +304,7 @@ int impl_data::read_result(std::string file_name) {
       }
     }
   }
-  if(runtime == 0) {
+  if(false && runtime == 0) {
     throw "terminated";
   }
   if(result == "hoge") {
