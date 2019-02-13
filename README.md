@@ -17,7 +17,7 @@ It generates out.blif which is dataflow(expressed in BLIF) of 2x2 matrix vector 
 Currently the configurations of options in "setting.txt" are complicated. If you want to change them, please ask me.
 
 Graphing tool is "programs/dotgen". You can see and compile its code "dotgen.cpp".
-Type "./dotgen out.blif out.pdf". It generates dataflow pdf in "out.pdf".
+Type "./dotgen out.blif out.png". It generates dataflow png in "out.png".
 A result for matrix2 is attached.
 
 For more details, see "readme.pdf" or please ask me. 

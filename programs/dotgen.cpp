@@ -325,7 +325,7 @@ int main(int argc, char** argv) {
   }
 #endif
   
-  dot_file << "digraph graph_name {\ngraph [ \ncharset = \"UTF-8\",\nrankdir = TB, ranksep = 0.5, size=\"8.27,11.69\", newrank=true\n];\n";
+  dot_file << "digraph graph_name {\ngraph [ \ncharset = \"UTF-8\",\nrankdir = TB, ranksep = 0.5, newrank=true\n];\n";//, size=\"8.27,11.69\"
   dot_file << "node [\nshape = record,\nfontname = \"Migu 1M\",\nfontsize = 12,\n];\n";
   
   for(unsigned int b = 0; b < regs[0].size(); b++) {
@@ -494,7 +494,7 @@ int main(int argc, char** argv) {
 
   flush(dot_file);
   
-  std::string command = "dot -T pdf " + std::string(dot_file_name) + " -o " + argv[2];
+  std::string command = "dot -T png " + std::string(dot_file_name) + " -o " + argv[2];
   system(command.c_str());
   
   return 0;

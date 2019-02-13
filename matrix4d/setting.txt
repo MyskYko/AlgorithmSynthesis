@@ -7,23 +7,16 @@ option1
 1
 option2
 1
-option3
-0
 option4
 1
 option5
 2,3,4
 option6
 2
-// lutout is nomore candidate.
 option7
 1
 option8
 0,1,0,1,0,1,1,0
-option9
-0
-option10
-0
 option11
 -1 1 2,3,4,5 2,3,4,5 2,3,4,5 2,3,4,5
 option12
